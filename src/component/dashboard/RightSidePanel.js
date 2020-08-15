@@ -1,34 +1,28 @@
 import React from "react";
 import { Card, Button, Row } from "react-bootstrap";
+import Team from "./team/Team";
+
+const style = { width: "18rem", margin: "1em", border: "none" };
 
 export default function RightSidePanel() {
   return (
     <div>
-      {" "}
       <Row>
-        {" "}
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+        <Card style={style}>
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title>Team</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              <Team />
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
           </Card.Body>
         </Card>
       </Row>
       <Row>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+        <Card style={style}>
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <Card.Title>Poker</Card.Title>
+            <Card.Text>Just select one</Card.Text>
+            <Button variant="primary">Reset</Button>
           </Card.Body>
         </Card>
       </Row>

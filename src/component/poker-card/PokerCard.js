@@ -5,7 +5,12 @@ import "./PokerCard.css";
 import infinity from "../icon/infinity.svg";
 
 class PokerCard extends Component {
-  state = { value: this.props.value };
+  state = {
+    value: {
+      storyPoint: this.props.value,
+      style: this.props.style,
+    },
+  };
 
   constructor(props) {
     super(props);
@@ -13,30 +18,31 @@ class PokerCard extends Component {
   }
 
   getDisplayableValue = () => {
-    return this.state.value !== Infinity ? (
-      this.state.value
+    return this.state.value.storyPoint !== Infinity ? (
+      this.state.value.storyPoint
     ) : (
-      <img src={infinity} alt="Infinity"></img>
+      <Card.Img variant="center" src={infinity} alt="Infinity" />
     );
   };
 
   onClick = (value) => {
-    alert("you clicked " + value);
+    this.props.onClick(value);
   };
 
   render() {
-    const value = this.getDisplayableValue();
+    const storePoint = this.getDisplayableValue();
+    const { value } = this.state;
 
     return (
       <div>
         <Card
-          style={{ width: "10rem", height: "15em" }}
-          className="m-1  pokerCard"
-          id={this.state.value}
-          onClick={() => this.onClick(this.state.value)}
+          style={value.style}
+          className="m-1 pokerCard"
+          id={value.storyPoint}
+          onClick={() => this.onClick(value.storyPoint)}
         >
           <Card.Body>
-            <h4>{value}</h4>
+            <h4>{storePoint}</h4>
           </Card.Body>
         </Card>
       </div>
