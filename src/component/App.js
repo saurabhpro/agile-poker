@@ -1,8 +1,8 @@
-import React from "react";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Dashboard from "./dashboard/Dashboard";
+import Dashboard from './dashboard/Dashboard';
 
 const App = () => {
   return (

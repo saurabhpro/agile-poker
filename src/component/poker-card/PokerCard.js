@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Card } from "react-bootstrap";
+import React, { Component } from 'react';
+import { Card } from 'react-bootstrap';
 
-import "./PokerCard.css";
-import infinity from "../icon/infinity.svg";
+import './PokerCard.css';
+import infinity from '../icon/infinity.svg';
 
 class PokerCard extends Component {
   state = {

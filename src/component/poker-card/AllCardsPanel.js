@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Container, CardDeck } from "react-bootstrap";
-import PokerCard from "./PokerCard";
+import React, { Component } from 'react';
+import { Container, CardDeck } from 'react-bootstrap';
+import PokerCard from './PokerCard';
 
 export default class AllCardsPanel extends Component {
   state = {
@@ -18,8 +18,8 @@ export default class AllCardsPanel extends Component {
           value={element}
           style={this.getStyle(element)}
           onClick={this.lockStoryPointCard}
-        />
-      )
+        />,
+      ),
     );
 
     return cards;
@@ -31,8 +31,8 @@ export default class AllCardsPanel extends Component {
 
   getStyle = (value) => {
     return {
-      width: "10rem",
-      height: "15em",
+      width: '10rem',
+      height: '15em',
       disabled: this.state.selectedSP !== value,
     };
   };
