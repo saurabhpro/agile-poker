@@ -1,18 +1,33 @@
-import React from "react";
+import React, { Component } from "react";
 import { Card } from "react-bootstrap";
 
-export default function PokerCard({ value }) {
-  return (
-    <div>
-      <Card style={{ width: "10rem" }}>
-        <Card.Body>
-          <Card.Title>{value}</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </div>
-  );
+import "./PokerCard.css";
+import infinity from "../icon/infinity.svg";
+
+class PokerCard extends Component {
+  state = { value: this.props.value };
+
+  render() {
+    const value =
+      this.state.value !== Infinity ? (
+        this.state.value
+      ) : (
+        <img src={infinity} alt="Infinity"></img>
+      );
+    return (
+      <div>
+        <Card
+          style={{ width: "10rem", height: "15em" }}
+          className="m-1  pokerCard"
+          id={this.state.value}
+        >
+          <Card.Body>
+            <h4>{value}</h4>
+          </Card.Body>
+        </Card>
+      </div>
+    );
+  }
 }
+
+export default PokerCard;
