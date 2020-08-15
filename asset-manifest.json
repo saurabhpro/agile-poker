@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f361e03.chunk.css",
-    "main.js": "/static/js/main.93dc173a.chunk.js",
-    "main.js.map": "/static/js/main.93dc173a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d2c58ba4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d2c58ba4.js.map",
-    "static/js/2.2a116359.chunk.js": "/static/js/2.2a116359.chunk.js",
-    "static/js/2.2a116359.chunk.js.map": "/static/js/2.2a116359.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.7211e0db1373293571dd7fc4532f122c.js": "/precache-manifest.7211e0db1373293571dd7fc4532f122c.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.2a116359.chunk.js.LICENSE.txt": "/static/js/2.2a116359.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "main.css": "/agile-poker/static/css/main.808c1762.chunk.css",
+    "main.js": "/agile-poker/static/js/main.14ea1947.chunk.js",
+    "main.js.map": "/agile-poker/static/js/main.14ea1947.chunk.js.map",
+    "runtime-main.js": "/agile-poker/static/js/runtime-main.e77ec55f.js",
+    "runtime-main.js.map": "/agile-poker/static/js/runtime-main.e77ec55f.js.map",
+    "static/css/2.11829350.chunk.css": "/agile-poker/static/css/2.11829350.chunk.css",
+    "static/js/2.6bc40c59.chunk.js": "/agile-poker/static/js/2.6bc40c59.chunk.js",
+    "static/js/2.6bc40c59.chunk.js.map": "/agile-poker/static/js/2.6bc40c59.chunk.js.map",
+    "index.html": "/agile-poker/index.html",
+    "precache-manifest.e6c835ab35ce95b28219a60bce4c2c7b.js": "/agile-poker/precache-manifest.e6c835ab35ce95b28219a60bce4c2c7b.js",
+    "service-worker.js": "/agile-poker/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/agile-poker/static/css/2.11829350.chunk.css.map",
+    "static/css/main.808c1762.chunk.css.map": "/agile-poker/static/css/main.808c1762.chunk.css.map",
+    "static/js/2.6bc40c59.chunk.js.LICENSE.txt": "/agile-poker/static/js/2.6bc40c59.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d2c58ba4.js",
-    "static/js/2.2a116359.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.93dc173a.chunk.js"
+    "static/js/runtime-main.e77ec55f.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.6bc40c59.chunk.js",
+    "static/css/main.808c1762.chunk.css",
+    "static/js/main.14ea1947.chunk.js"
   ]
 }
