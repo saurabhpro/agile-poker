@@ -1,5 +1,5 @@
 ## agile-poker
-
+[![Build Status](https://travis-ci.com/saurabhpro/agile-poker.svg?branch=master)](https://travis-ci.com/saurabhpro/agile-poker)
 
 rm App.js App.test.js App.css logo.svg
 
