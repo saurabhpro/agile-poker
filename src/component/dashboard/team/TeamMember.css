@@ -1,0 +1,15 @@
+.teamMember__details {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: -1px;
+    margin: auto;
+}
+
+.teamMember__online {
+    color: green;
+}
+
+.teamMember__offline {
+    color: #FF4848;
+}

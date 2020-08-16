@@ -3,32 +3,34 @@ import { Card, Button } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 
 import Team from '../team/Team';
+import './RighSideCard.css';
 
-const style = { width: '18rem', margin: '1em', border: 'none' };
+const style = { border: 'none' };
 
 export default function RightSidePanel({ userName }) {
   return (
     <div>
       <Container>
-        <Card style={style}>
+        <Card className="rightCard" style={style}>
           <Card.Body>
-            <Card.Title>Current User</Card.Title>
-            {userName}
+            <Card.Title className="title">Poker</Card.Title>
+            <Card.Text className="text">{userName}</Card.Text>
+            <p className="text">Scrum Master</p>
+            <Button
+              block
+              onClick={() => {
+                window.location.href = `${process.env.PUBLIC_URL}/`;
+              }}
+              variant="Link"
+            >
+              Reset
+            </Button>
           </Card.Body>
         </Card>
 
-        <Card style={style}>
+        <Card className="rightCard teamCard" style={style}>
           <Card.Body>
-            <Card.Title>Team</Card.Title>
-            <Team />
-          </Card.Body>
-        </Card>
-
-        <Card style={style}>
-          <Card.Body>
-            <Card.Title>Poker</Card.Title>
-            <Card.Text>Just select one</Card.Text>
-            <Button variant="primary">Reset</Button>
+            <Team className="title" />
           </Card.Body>
         </Card>
       </Container>

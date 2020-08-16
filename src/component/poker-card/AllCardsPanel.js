@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Container, CardDeck } from 'react-bootstrap';
+
 import PokerCard from './PokerCard';
-import Firebase from '../Firebase';
+
+import database from '../Firebase';
 
 export default function AllCardsPanel() {
   const [cardValues, setCardValues] = useState([]);
   const [selectedSP, setSelectedSP] = useState(undefined);
 
   // cardValues: [1, 2, 3, 5, 8, 13, 20, Infinity],
-  //   selectedSP: undefined,
+  // selectedSP: undefined,
 
   useEffect(() => {
-    const unsubscribe = new Firebase().database
+    const unsubscribe = database
       .collection('points')
       .onSnapshot((snapshot) => {
         const sp = snapshot.docs.map((point) => point.data().numeric);
@@ -22,6 +24,7 @@ export default function AllCardsPanel() {
       // this is the cleanup of listeners
       unsubscribe(); //it'll detach the listeners
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const lockStoryPointCard = (value) => {
@@ -59,7 +62,7 @@ export default function AllCardsPanel() {
 
   return (
     <Container>
-      <CardDeck style={{ flexDirection: 'row' }}>
+      <CardDeck style={{ flexDirection: 'row', marginTop: '10px' }}>
         {getAllCards()}
       </CardDeck>
     </Container>

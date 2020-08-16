@@ -12,6 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import sessionStoreUserName from '../utils/sessionStore';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -47,9 +48,7 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
   const classes = useStyles();
 
-  const [user, setUser] = React.useState(
-    sessionStorage.getItem('agilePokerUserName') || '',
-  );
+  const [user, setUser] = React.useState(sessionStoreUserName());
 
   /**
    * clears the session store and then href

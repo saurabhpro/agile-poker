@@ -2,9 +2,10 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import HomePage from './HomePage';
 import Landing from './Landing';
+import sessionStoreUserName from '../utils/sessionStore';
 
 export default function Dashboard() {
-  const userName = sessionStorage.getItem('agilePokerUserName') || '';
+  const userName = sessionStoreUserName();
 
   return (
     <div>
