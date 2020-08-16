@@ -1,24 +1,23 @@
 import React from 'react';
-
-import { Col, Row, Container } from 'react-bootstrap';
-
-import CardPanel from './CardPanel';
-import RightSidePanel from './RightSidePanel';
+import { Container } from 'react-bootstrap';
+import HomePage from './HomePage';
+import Landing from './Landing';
 
 export default function Dashboard() {
+  const [value, setValue] = React.useState(
+    sessionStorage.getItem('agilePokerUserName') || '',
+  );
   return (
-    <Container
-      fluid="sm"
-      className="mr-4 p-1 flex-fill justify-content-center"
-    >
-      <Row>
-        <Col xs={8}>
-          <CardPanel />
-        </Col>
-        <Col md="auto">
-          <RightSidePanel />
-        </Col>
-      </Row>
-    </Container>
+    <div>
+      {!value && <HomePage />}
+      {value && (
+        <Container
+          fluid="sm"
+          className="mr-4 p-1 flex-fill justify-content-center"
+        >
+          <Landing userName={value} logout={setValue} />
+        </Container>
+      )}
+    </div>
   );
 }

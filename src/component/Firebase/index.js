@@ -3,7 +3,7 @@ For a well-encapsulated Firebase module, we'll define a index.js file in our Fir
 */
 
 import FirebaseContext from './context';
-import Firebase from './firebase';
+import Firebase from './Firebase';
 
 export default Firebase;
 

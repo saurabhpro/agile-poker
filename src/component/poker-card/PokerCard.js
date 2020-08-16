@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 
+import PropTypes from 'prop-types';
+
 import './PokerCard.css';
 import infinity from '../icon/infinity.svg';
 
@@ -49,5 +51,10 @@ class PokerCard extends Component {
     );
   }
 }
+
+PokerCard.propTypes = {
+  getDisplayableValue: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default PokerCard;
