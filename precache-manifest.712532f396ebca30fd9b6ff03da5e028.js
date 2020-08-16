@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf390c4adf6cf65bc3655ba2b559f400",
+    "revision": "e9f519d05012df457b35301f73203d75",
     "url": "/agile-poker/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/agile-poker/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "fe509014592cfdbeaee3",
-    "url": "/agile-poker/static/css/main.d41b68f4.chunk.css"
+    "revision": "cf97f1675dab331c771a",
+    "url": "/agile-poker/static/css/main.72baad5c.chunk.css"
   },
   {
     "revision": "ef9b2c36e478b0b4af99",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/agile-poker/static/js/2.9a85c662.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fe509014592cfdbeaee3",
-    "url": "/agile-poker/static/js/main.9de32053.chunk.js"
+    "revision": "cf97f1675dab331c771a",
+    "url": "/agile-poker/static/js/main.b983e185.chunk.js"
   },
   {
     "revision": "351bc9314dd750f5b0c1",
