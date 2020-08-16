@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import { Col, Row } from 'react-bootstrap';
 
-import CardPanel from './CardPanel';
-import RightSidePanel from './RightSidePanel';
+import CardPanel from './frame/CardPanel';
+import RightSidePanel from './frame/RightSidePanel';
 
 const Landing = (props) => {
   return (

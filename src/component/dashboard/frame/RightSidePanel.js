@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button, Row } from 'react-bootstrap';
-import Team from './team/Team';
+import Team from '../team/Team';
 
 const style = { width: '18rem', margin: '1em', border: 'none' };
 

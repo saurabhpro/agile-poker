@@ -36,16 +36,18 @@ export default function AllCardsPanel() {
     const cards = [];
     console.log(cardValues);
 
-    cardValues.sort().forEach((element) => {
-      cards.push(
-        <PokerCard
-          key={element}
-          value={element}
-          style={getStyle(element)}
-          onClick={lockStoryPointCard}
-        />,
-      );
-    });
+    cardValues
+      .sort((a, b) => a - b)
+      .forEach((element) => {
+        cards.push(
+          <PokerCard
+            key={element}
+            value={element}
+            style={getStyle(element)}
+            onClick={lockStoryPointCard}
+          />,
+        );
+      });
 
     return cards;
   };
