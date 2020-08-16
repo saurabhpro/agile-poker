@@ -11,12 +11,17 @@ export default function AllCardsPanel() {
   //   selectedSP: undefined,
 
   useEffect(() => {
-    new Firebase().database
+    const unsubscribe = new Firebase().database
       .collection('points')
       .onSnapshot((snapshot) => {
         const sp = snapshot.docs.map((point) => point.data().numeric);
         setCardValues(sp[0]);
       });
+
+    return () => {
+      // this is the cleanup of listeners
+      unsubscribe(); //it'll detach the listeners
+    };
   }, []);
 
   const lockStoryPointCard = (value) => {
@@ -34,7 +39,7 @@ export default function AllCardsPanel() {
 
   const getAllCards = () => {
     const cards = [];
-    console.log(cardValues);
+    //console.log(cardValues);
 
     cardValues
       .sort((a, b) => a - b)
@@ -54,7 +59,9 @@ export default function AllCardsPanel() {
 
   return (
     <Container>
-      <CardDeck>{getAllCards()}</CardDeck>
+      <CardDeck style={{ flexDirection: 'row' }}>
+        {getAllCards()}
+      </CardDeck>
     </Container>
   );
 }

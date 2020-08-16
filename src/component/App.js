@@ -14,9 +14,7 @@ const App = () => {
         <Header />
       </header>
 
-      <body>
-        <Dashboard />
-      </body>
+      <Dashboard />
 
       <footer>
         <Box mt={8}>

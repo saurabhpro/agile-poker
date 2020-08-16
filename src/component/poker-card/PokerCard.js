@@ -53,7 +53,6 @@ class PokerCard extends Component {
 }
 
 PokerCard.propTypes = {
-  getDisplayableValue: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 

@@ -4,19 +4,18 @@ import HomePage from './HomePage';
 import Landing from './Landing';
 
 export default function Dashboard() {
-  const [value, setValue] = React.useState(
-    sessionStorage.getItem('agilePokerUserName') || '',
-  );
+  const userName = sessionStorage.getItem('agilePokerUserName') || '';
+
   return (
     <div>
-      {!value && <HomePage />}
+      {!userName && <HomePage />}
 
-      {value && (
+      {userName && (
         <Container
-          fluid="sm"
-          className="mr-4 p-1 flex-fill justify-content-center"
+          fluid="md"
+          className="ml-6 p-1 flex-fill justify-content-center"
         >
-          <Landing userName={value} logout={setValue} />
+          <Landing userName={userName} />
         </Container>
       )}
     </div>

@@ -1,38 +1,29 @@
 import React from 'react';
-import { Card, Button, Row } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+
 import Team from '../team/Team';
 
 const style = { width: '18rem', margin: '1em', border: 'none' };
 
-export default function RightSidePanel(props) {
-  const clearSessionStore = () => {
-    console.log(props);
-    sessionStorage.clear();
-    props.logout(undefined);
-  };
-
+export default function RightSidePanel({ userName }) {
   return (
     <div>
-      <Row>
+      <Container>
         <Card style={style}>
           <Card.Body>
             <Card.Title>Current User</Card.Title>
-            {props.userName}
-            <Button type="submit" onClick={() => clearSessionStore()}>
-              Go Out
-            </Button>
+            {userName}
           </Card.Body>
         </Card>
-      </Row>
-      <Row>
+
         <Card style={style}>
           <Card.Body>
             <Card.Title>Team</Card.Title>
             <Team />
           </Card.Body>
         </Card>
-      </Row>
-      <Row>
+
         <Card style={style}>
           <Card.Body>
             <Card.Title>Poker</Card.Title>
@@ -40,7 +31,7 @@ export default function RightSidePanel(props) {
             <Button variant="primary">Reset</Button>
           </Card.Body>
         </Card>
-      </Row>
+      </Container>
     </div>
   );
 }
