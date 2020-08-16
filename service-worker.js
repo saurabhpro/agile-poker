@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/agile-poker/precache-manifest.4db35940a1f524d022cd54e6c21f6751.js"
+  "/agile-poker/precache-manifest.589139893112ec63cb22e5c1a989d465.js"
 );
 
 self.addEventListener('message', (event) => {
