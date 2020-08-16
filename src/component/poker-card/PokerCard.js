@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Card } from "react-bootstrap";
+import React, { Component } from 'react';
+import { Card } from 'react-bootstrap';
 
-import "./PokerCard.css";
-import infinity from "../icon/infinity.svg";
+import './PokerCard.css';
+import infinity from '../icon/infinity.svg';
 
 class PokerCard extends Component {
   state = {
@@ -18,7 +18,7 @@ class PokerCard extends Component {
   }
 
   getDisplayableValue = () => {
-    return this.state.value.storyPoint !== Infinity ? (
+    return this.state.value.storyPoint !== 'Infinity' ? (
       this.state.value.storyPoint
     ) : (
       <Card.Img variant="center" src={infinity} alt="Infinity" />

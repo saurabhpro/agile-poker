@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class Team extends Component {
   render() {
     return (
-      <div>
+      <ul>
         <li>Ram</li>
         <li>Shyam</li>
         <li>ok</li>
-      </div>
+      </ul>
     );
   }
 }

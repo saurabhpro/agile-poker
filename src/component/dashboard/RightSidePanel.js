@@ -1,8 +1,8 @@
-import React from "react";
-import { Card, Button, Row } from "react-bootstrap";
-import Team from "./team/Team";
+import React from 'react';
+import { Card, Button, Row } from 'react-bootstrap';
+import Team from './team/Team';
 
-const style = { width: "18rem", margin: "1em", border: "none" };
+const style = { width: '18rem', margin: '1em', border: 'none' };
 
 export default function RightSidePanel() {
   return (
@@ -11,9 +11,8 @@ export default function RightSidePanel() {
         <Card style={style}>
           <Card.Body>
             <Card.Title>Team</Card.Title>
-            <Card.Text>
-              <Team />
-            </Card.Text>
+
+            <Team />
           </Card.Body>
         </Card>
       </Row>
