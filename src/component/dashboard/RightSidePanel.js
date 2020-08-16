@@ -11,9 +11,8 @@ export default function RightSidePanel() {
         <Card style={style}>
           <Card.Body>
             <Card.Title>Team</Card.Title>
-            <Card.Text>
-              <Team />
-            </Card.Text>
+
+            <Team />
           </Card.Body>
         </Card>
       </Row>

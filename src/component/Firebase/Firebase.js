@@ -13,6 +13,7 @@ class Firebase {
     firebase.initializeApp(config);
 
     this.auth = firebase.auth();
+    this.database = firebase.firestore();
   }
 
   // *** Auth API ***

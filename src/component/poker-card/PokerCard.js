@@ -18,7 +18,7 @@ class PokerCard extends Component {
   }
 
   getDisplayableValue = () => {
-    return this.state.value.storyPoint !== Infinity ? (
+    return this.state.value.storyPoint !== 'Infinity' ? (
       this.state.value.storyPoint
     ) : (
       <Card.Img variant="center" src={infinity} alt="Infinity" />

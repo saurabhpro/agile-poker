@@ -1,49 +1,58 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, CardDeck } from 'react-bootstrap';
 import PokerCard from './PokerCard';
+import Firebase from '../Firebase';
 
-export default class AllCardsPanel extends Component {
-  state = {
-    cardValues: [1, 2, 3, 5, 8, 13, 20, Infinity],
-    selectedSP: undefined,
+export default function AllCardsPanel() {
+  const [cardValues, setCardValues] = useState([]);
+  const [selectedSP, setSelectedSP] = useState(undefined);
+
+  // cardValues: [1, 2, 3, 5, 8, 13, 20, Infinity],
+  //   selectedSP: undefined,
+
+  useEffect(() => {
+    new Firebase().database
+      .collection('points')
+      .onSnapshot((snapshot) => {
+        const sp = snapshot.docs.map((point) => point.data().numeric);
+        setCardValues(sp[0]);
+      });
+  }, []);
+
+  const lockStoryPointCard = (value) => {
+    setSelectedSP(value);
+    setCardValues([value]);
   };
 
-  getAllCards = () => {
-    const cards = [];
+  const getStyle = (value) => {
+    return {
+      width: '10rem',
+      height: '15em',
+      disabled: selectedSP !== value,
+    };
+  };
 
-    this.state.cardValues.forEach((element) =>
+  const getAllCards = () => {
+    const cards = [];
+    console.log(cardValues);
+
+    cardValues.sort().forEach((element) => {
       cards.push(
         <PokerCard
           key={element}
           value={element}
-          style={this.getStyle(element)}
-          onClick={this.lockStoryPointCard}
+          style={getStyle(element)}
+          onClick={lockStoryPointCard}
         />,
-      ),
-    );
+      );
+    });
 
     return cards;
   };
 
-  lockStoryPointCard = (value) => {
-    this.setState({ selectedSP: value, cardValues: [value] });
-  };
-
-  getStyle = (value) => {
-    return {
-      width: '10rem',
-      height: '15em',
-      disabled: this.state.selectedSP !== value,
-    };
-  };
-
-  render() {
-    const cards = this.getAllCards();
-
-    return (
-      <Container>
-        <CardDeck>{cards}</CardDeck>
-      </Container>
-    );
-  }
+  return (
+    <Container>
+      <CardDeck>{getAllCards()}</CardDeck>
+    </Container>
+  );
 }
