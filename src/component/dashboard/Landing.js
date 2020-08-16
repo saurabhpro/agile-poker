@@ -7,16 +7,14 @@ import RightSidePanel from './frame/RightSidePanel';
 
 const Landing = ({ userName }) => {
   return (
-    <div>
-      <Row>
-        <Col xs={10}>
-          <CardPanel />
-        </Col>
-        <Col xs="auto">
-          <RightSidePanel userName={userName} />
-        </Col>
-      </Row>
-    </div>
+    <Row>
+      <Col xs={8}>
+        <CardPanel />
+      </Col>
+      <Col xs="auto">
+        <RightSidePanel userName={userName} />
+      </Col>
+    </Row>
   );
 };
 
