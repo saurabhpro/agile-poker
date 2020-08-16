@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
-import { Button } from '@material-ui/core';
+import { Button, Tooltip } from '@material-ui/core';
 
 import database from '../../Firebase';
 
@@ -91,9 +91,13 @@ function TeamMemberDetail({ usr }) {
         <p>{usr.userName.toUpperCase()}</p>
         <span>
           {usr.isOnline ? (
-            <ImportantDevicesIcon className="teamMember__online" />
+            <Tooltip title="connected" placement="right-start">
+              <ImportantDevicesIcon className="teamMember__online" />
+            </Tooltip>
           ) : (
-            <NotInterestedIcon className="teamMember__offline" />
+            <Tooltip title="offline" placement="right-start">
+              <NotInterestedIcon className="teamMember__offline" />
+            </Tooltip>
           )}
         </span>
       </div>
