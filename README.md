@@ -4,6 +4,10 @@
 [![Build Status](https://travis-ci.com/saurabhpro/agile-poker.svg?branch=master)](https://travis-ci.com/saurabhpro/agile-poker)
 [![Known Vulnerabilities](https://snyk.io/test/github/saurabhpro/agile-poker/badge.svg)](https://snyk.io/test/github/saurabhpro/agile-poker)
 
+## Live
+https://saurabhpro.github.io/agile-poker/
+- just enter anything in login page
+- and thats's it ;)
 
 
 ### Start
