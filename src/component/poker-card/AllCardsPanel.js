@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, CardDeck } from 'react-bootstrap';
+import { CardDeck } from 'react-bootstrap';
 
 import PokerCard from './PokerCard';
 
@@ -61,10 +61,14 @@ export default function AllCardsPanel() {
   };
 
   return (
-    <Container>
-      <CardDeck style={{ flexDirection: 'row', marginTop: '10px' }}>
-        {getAllCards()}
-      </CardDeck>
-    </Container>
+    <CardDeck
+      style={{
+        flexDirection: 'row',
+        marginTop: '10px',
+        marginBottom: '20px',
+      }}
+    >
+      {getAllCards()}
+    </CardDeck>
   );
 }

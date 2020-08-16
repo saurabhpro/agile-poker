@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 
 import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
-import { Button, Tooltip } from '@material-ui/core';
+import { Tooltip } from '@material-ui/core';
 
 import database from '../../Firebase';
 

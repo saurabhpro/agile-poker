@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import HomePage from './HomePage';
 import Landing from './Landing';
 import sessionStoreUserName from '../utils/sessionStore';
@@ -12,12 +11,9 @@ export default function Dashboard() {
       {!userName && <HomePage />}
 
       {userName && (
-        <Container
-          fluid="md"
-          className="ml-6 p-1 flex-fill justify-content-center"
-        >
+        <div>
           <Landing userName={userName} />
-        </Container>
+        </div>
       )}
     </div>
   );
