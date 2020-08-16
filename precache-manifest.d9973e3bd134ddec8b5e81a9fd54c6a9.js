@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5690c532570124a0041f667980328761",
+    "revision": "cf390c4adf6cf65bc3655ba2b559f400",
     "url": "/agile-poker/index.html"
   },
   {
