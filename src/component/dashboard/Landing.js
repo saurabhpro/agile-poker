@@ -12,10 +12,10 @@ const Landing = ({ userName }) => {
       style={{ flexGrow: 3 }}
     >
       <Row>
-        <div class="col-sm-9">
+        <div className="col-sm-9">
           <CardPanel />
         </div>
-        <div class="col-md">
+        <div className="col-md">
           <RightSidePanel userName={userName} />
         </div>
       </Row>

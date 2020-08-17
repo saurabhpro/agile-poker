@@ -13,6 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import sessionStoreUserName from '../utils/sessionStore';
+import signOut from '../dashboard/signin/SignOut';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -55,7 +56,7 @@ const Header = () => {
    */
   const clearSessionStore = () => {
     setUser(undefined);
-    sessionStorage.clear();
+    signOut();
   };
 
   const loggedIn = !!user;
@@ -101,7 +102,7 @@ const Header = () => {
               </Tooltip>
               <Tooltip title="Logout" arrow>
                 <IconButton
-                  href={`${process.env.PUBLIC_URL}/`}
+                  //href={`${process.env.PUBLIC_URL}/`}
                   onClick={() => clearSessionStore()}
                 >
                   <Fab color="secondary" className={classes.fab}>

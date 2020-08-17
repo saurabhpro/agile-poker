@@ -88,6 +88,7 @@
 .rightCard:hover .icon i {
     background: linear-gradient(90deg, #FF7E7E, #FF4848);
     -webkit-background-clip: text;
+    background-clip: inherit;
     -webkit-text-fill-color: transparent;
     opacity: 1;
     transition: all 0.3s ease;

@@ -10,6 +10,8 @@ import Typography from '@material-ui/core/Typography';
 
 import styles from './styles';
 
+import database from '../../Firebase';
+
 export default function SignIn() {
   const [userName, setUserName] = React.useState(undefined);
 
@@ -17,9 +19,46 @@ export default function SignIn() {
     setUserName(event.target.value);
   };
 
-  const onSubmit = () => {
-    if (userName) {
-      sessionStorage.setItem('agilePokerUserName', userName);
+  async function getAndSetUser() {
+    // [START getAndSetUser]
+    const userRef = database.collection('users').doc(userName);
+    const doc = await userRef.get();
+
+    if (doc.exists) {
+      setUser(doc.data());
+    }
+    // [END getAndSetUser]
+  }
+
+  async function setUser(doc) {
+    // [START set_document]
+    const data = {
+      userName: doc.userName,
+      isOnline: true,
+      isActive: true,
+      memberSince: doc.memberSince,
+      team: doc.team,
+    };
+
+    // Add a new document in collection "cities" with ID 'LA'
+    const res = await database
+      .collection('users')
+      .doc(userName)
+      .set(data);
+    // [END set_document]
+
+    sessionStorage.setItem('agilePokerUserName', userName);
+
+    console.log('Set: ', res);
+    // allow refreshing the page - and since our update was sucessful - we wil see home page
+    window.location.href = `${process.env.PUBLIC_URL}/`;
+  }
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    if (!!userName) {
+      getAndSetUser();
     }
   };
 
