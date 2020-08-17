@@ -1,4 +1,4 @@
-actionimport sessionStoreUserName, {
+import sessionStoreUserName, {
   sessionStoreClearUserName,
 } from '../utils/sessionStore';
 
