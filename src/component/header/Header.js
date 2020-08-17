@@ -13,7 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import sessionStoreUserName from '../utils/sessionStore';
-import signOut from '../dashboard/signin/SignOut';
+import signOut from '../auth/SignOut';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -55,8 +55,8 @@ const Header = () => {
    * clears the session store and then href
    */
   const clearSessionStore = () => {
-    setUser(undefined);
     signOut();
+    setUser(undefined);
   };
 
   const loggedIn = !!user;

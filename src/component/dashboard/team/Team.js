@@ -37,6 +37,7 @@ const Team = ({ className }) => {
               className={className}
             >{`${teamName.toUpperCase()}`}</h5>
           </div>
+
           <TeamMember team={teamName} />
         </div>
       )}

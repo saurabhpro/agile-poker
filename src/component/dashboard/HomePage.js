@@ -1,11 +1,26 @@
 import React from 'react';
 
-import SignIn from './signin/SignIn';
+import { Row } from 'react-bootstrap';
 
-export default function HomePage() {
+import CardPanel from './frame/CardPanel';
+import RightSidePanel from './frame/RightSidePanel';
+
+const HomePage = ({ userName }) => {
   return (
-    <div>
-      <SignIn />
+    <div
+      className="container-md content-justify-center-sm"
+      style={{ flexGrow: 3 }}
+    >
+      <Row>
+        <div className="col-sm-9">
+          <CardPanel />
+        </div>
+        <div className="col-md">
+          <RightSidePanel userName={userName} />
+        </div>
+      </Row>
     </div>
   );
-}
+};
+
+export default HomePage;

@@ -1,8 +1,8 @@
-import sessionStoreUserName, {
+actionimport sessionStoreUserName, {
   sessionStoreClearUserName,
-} from '../../utils/sessionStore';
+} from '../utils/sessionStore';
 
-import database from '../../Firebase';
+import database from '../Firebase';
 
 export default function signOut() {
   const userName = sessionStoreUserName();

@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 
 import styles from './styles';
 
-import database from '../../Firebase';
+import database from '../Firebase';
 
 export default function SignIn() {
   const [userName, setUserName] = React.useState(undefined);

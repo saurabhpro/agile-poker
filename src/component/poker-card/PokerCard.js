@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 
-import PropTypes from 'prop-types';
-
 import './PokerCard.css';
-import infinity from '../icon/infinity.svg';
+import infinity from './icon/infinity.svg';
 
 class PokerCard extends Component {
   state = {
@@ -46,14 +44,11 @@ class PokerCard extends Component {
           <Card.Body>
             <h4>{storePoint}</h4>
           </Card.Body>
+          {this.props.footer}
         </Card>
       </div>
     );
   }
 }
-
-PokerCard.propTypes = {
-  onClick: PropTypes.func.isRequired,
-};
 
 export default PokerCard;

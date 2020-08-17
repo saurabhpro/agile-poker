@@ -4,10 +4,14 @@ import { CardDeck } from 'react-bootstrap';
 import PokerCard from './PokerCard';
 
 import database from '../Firebase';
+import sessionStoreUserName from '../utils/sessionStore';
+import Result from './Result';
 
 export default function AllCardsPanel() {
+  const userName = sessionStoreUserName();
   const [cardValues, setCardValues] = useState([]);
   const [selectedSP, setSelectedSP] = useState(undefined);
+  const [showResult, setShowResult] = useState(false);
 
   // cardValues: [1, 2, 3, 5, 8, 13, 20, Infinity],
   // selectedSP: undefined,
@@ -29,6 +33,18 @@ export default function AllCardsPanel() {
 
   const lockStoryPointCard = (value) => {
     setSelectedSP(value);
+
+    // Add a new document in collection "result/task/users" with ID 'userName'
+    const res = database
+      .collection('result')
+      .doc('IND-01')
+      .collection('users')
+      .doc(userName)
+      .set({ storyPoint: value });
+
+    console.log('Stored Result: ', res);
+
+    setShowResult(true);
     setCardValues([value]);
   };
 
@@ -42,8 +58,7 @@ export default function AllCardsPanel() {
 
   const getAllCards = () => {
     const cards = [];
-    //console.log(cardValues);
-
+   
     cardValues
       .sort((a, b) => a - b)
       .forEach((element) => {
@@ -61,14 +76,20 @@ export default function AllCardsPanel() {
   };
 
   return (
-    <CardDeck
-      style={{
-        flexDirection: 'row',
-        marginTop: '10px',
-        marginBottom: '20px',
-      }}
-    >
-      {getAllCards()}
-    </CardDeck>
+    <div>
+      {!showResult ? (
+        <CardDeck
+          style={{
+            flexDirection: 'row',
+            marginTop: '10px',
+            marginBottom: '20px',
+          }}
+        >
+          {getAllCards()}
+        </CardDeck>
+      ) : (
+        <Result />
+      )}
+    </div>
   );
 }

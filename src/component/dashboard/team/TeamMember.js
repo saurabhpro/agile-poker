@@ -11,36 +11,6 @@ import './TeamMember.css';
 export default function TeamMember({ team }) {
   const [users, setUsers] = useState([]);
 
-  const ArrayObjectEquals = (oldArr, newArr) => {
-    if (oldArr.length !== newArr.length) {
-      return false;
-    }
-
-    let result = true;
-
-    oldArr.forEach((o) => {
-      newArr.forEach((n) => {
-        let rv = true;
-        if (o.userName === n.userName) {
-          rv = rv && n['isOnline'] === o['isOnline'];
-          if (!rv) {
-            console.log(
-              'isOnline',
-              ' ',
-              n['isOnline'],
-              ' ',
-              o['isOnline'],
-            );
-          }
-        }
-
-        result = result && rv;
-      });
-    });
-
-    return result;
-  };
-
   useEffect(() => {
     const tmp = [];
 
@@ -74,7 +44,7 @@ export default function TeamMember({ team }) {
         .filter(
           (usr) => usr.isActive && usr.team.toUpperCase() === team,
         )
-        .slice(0, 7)
+        .slice(0, 7) // max 7 users visible on side pane
         // .filter((usr) => usr.team === getUserName)
         .map((usr) => (
           <TeamMemberDetail key={usr.userName} usr={usr} />
@@ -83,23 +53,63 @@ export default function TeamMember({ team }) {
   );
 }
 
-function TeamMemberDetail({ usr }) {
+const TeamMemberDetail = ({ usr }) => {
   return (
     <div className="teamMember">
       <div className="teamMember__details">
         <p>{usr.userName.toUpperCase()}</p>
         <span>
-          {usr.isOnline ? (
-            <Tooltip title="connected" placement="right-start">
-              <ImportantDevicesIcon className="teamMember__online" />
-            </Tooltip>
-          ) : (
-            <Tooltip title="offline" placement="right-start">
-              <NotInterestedIcon className="teamMember__offline" />
-            </Tooltip>
-          )}
+          {usr.isOnline
+            ? onlineNotification()
+            : offlineNotification()}
         </span>
       </div>
     </div>
   );
-}
+};
+
+const offlineNotification = () => {
+  return (
+    <Tooltip title="offline" placement="right-start">
+      <NotInterestedIcon className="teamMember__offline" />
+    </Tooltip>
+  );
+};
+
+const onlineNotification = () => {
+  return (
+    <Tooltip title="connected" placement="right-start">
+      <ImportantDevicesIcon className="teamMember__online" />
+    </Tooltip>
+  );
+};
+
+const ArrayObjectEquals = (oldArr, newArr) => {
+  if (oldArr.length !== newArr.length) {
+    return false;
+  }
+
+  let result = true;
+
+  oldArr.forEach((o) => {
+    newArr.forEach((n) => {
+      let rv = true;
+      if (o.userName === n.userName) {
+        rv = rv && n['isOnline'] === o['isOnline'];
+        if (!rv) {
+          console.log(
+            'isOnline',
+            ' ',
+            n['isOnline'],
+            ' ',
+            o['isOnline'],
+          );
+        }
+      }
+
+      result = result && rv;
+    });
+  });
+
+  return result;
+};
