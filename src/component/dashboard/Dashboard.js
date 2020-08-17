@@ -1,5 +1,5 @@
 import React from 'react';
-import HomePage from './HomePage';
+import HomePage from './frame/HomePage';
 import sessionStoreUserName from '../utils/sessionStore';
 import SignIn from '../auth/SignIn';
 

@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import styles from './styles';
 
 import database from '../Firebase';
+import { addUserNameToSessionStore } from '../utils/sessionStore';
 
 export default function SignIn() {
   const [userName, setUserName] = React.useState(undefined);
@@ -31,13 +32,14 @@ export default function SignIn() {
   }
 
   async function setUser(doc) {
-    // [START set_document]
+    // [START setUser]
     const data = {
       userName: doc.userName,
       isOnline: true,
       isActive: true,
       memberSince: doc.memberSince,
       team: doc.team,
+      role: doc.role,
     };
 
     // Add a new document in collection "cities" with ID 'LA'
@@ -45,11 +47,9 @@ export default function SignIn() {
       .collection('users')
       .doc(userName)
       .set(data);
-    // [END set_document]
+    // [END setUser]
 
-    sessionStorage.setItem('agilePokerUserName', userName);
-
-    console.log('Set: ', res);
+    console.log('Set logged in user: ', res);
     // allow refreshing the page - and since our update was sucessful - we wil see home page
     window.location.href = `${process.env.PUBLIC_URL}/`;
   }
@@ -59,6 +59,8 @@ export default function SignIn() {
 
     if (!!userName) {
       getAndSetUser();
+
+      addUserNameToSessionStore(userName);
     }
   };
 

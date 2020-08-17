@@ -16,3 +16,11 @@
     background-color: darkblue;
     color: white;
 }
+
+.pokerCard__footer {
+    height: 5em;
+    max-height: 5em;
+    font-size: small;
+    background-blend-mode: hue;
+    overflow-wrap: break-word;
+}

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { CardDeck } from 'react-bootstrap';
 
+import Result from './Result';
 import PokerCard from './PokerCard';
 
-import database from '../Firebase';
-import sessionStoreUserName from '../utils/sessionStore';
-import Result from './Result';
+import database from '../../../Firebase';
+import sessionStoreUserName from '../../../utils/sessionStore';
 
 export default function AllCardsPanel() {
   const userName = sessionStoreUserName();
@@ -58,7 +58,7 @@ export default function AllCardsPanel() {
 
   const getAllCards = () => {
     const cards = [];
-   
+
     cardValues
       .sort((a, b) => a - b)
       .forEach((element) => {

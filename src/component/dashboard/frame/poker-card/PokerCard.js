@@ -26,7 +26,7 @@ class PokerCard extends Component {
   };
 
   onClick = (value) => {
-    this.props.onClick(value);
+    this.props.onClick && this.props.onClick(value);
   };
 
   render() {
@@ -44,7 +44,11 @@ class PokerCard extends Component {
           <Card.Body>
             <h4>{storePoint}</h4>
           </Card.Body>
-          {this.props.footer}
+          {this.props.footer && (
+            <Card.Footer className="pokerCard__footer">
+              {this.props.footer}
+            </Card.Footer>
+          )}
         </Card>
       </div>
     );

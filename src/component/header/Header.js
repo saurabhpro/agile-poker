@@ -94,7 +94,11 @@ const Header = () => {
             <div>
               {' '}
               <Tooltip title="Profile" arrow>
-                <IconButton>
+                <IconButton
+                  onClick={() =>
+                    alert('you found a hidden feature ;)')
+                  }
+                >
                   <Fab color="primary" className={classes.fab}>
                     <AccountCircleIcon />
                   </Fab>

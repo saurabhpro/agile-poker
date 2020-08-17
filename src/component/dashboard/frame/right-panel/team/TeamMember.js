@@ -4,7 +4,7 @@ import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
 import { Tooltip } from '@material-ui/core';
 
-import database from '../../Firebase';
+import database from '../../../../Firebase';
 
 import './TeamMember.css';
 
@@ -35,8 +35,7 @@ export default function TeamMember({ team }) {
       // this is the cleanup of listeners
       unsubscribe(); //it'll detach the listeners
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [users]);
+  }, [users, team]);
 
   return (
     <div>

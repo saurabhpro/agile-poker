@@ -12,7 +12,7 @@ export default function signOut() {
 }
 
 async function unsetUser(user) {
-  // [START set_document]
+  // [START unsetUser]
 
   const userRef = database.collection('users').doc(user);
 
@@ -31,13 +31,13 @@ async function unsetUser(user) {
       },
       { merge: true },
     );
-    // [END set_document]
+    // [END unsetUser]
 
     console.log('Set: ', res);
 
     // allow refreshing the page - and since our update was sucessful - we wil see home page
     window.location.href = `${process.env.PUBLIC_URL}/`;
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 }

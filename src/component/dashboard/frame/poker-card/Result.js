@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import database from '../Firebase';
-import sessionStoreUserName from '../utils/sessionStore';
+import database from '../../../Firebase';
 import PokerCard from './PokerCard';
 import { CardDeck } from 'react-bootstrap';
 
@@ -41,40 +39,26 @@ const Result = (props) => {
     };
   }, [resultMap]);
 
-  const compareMaps = (map1, map2) => {
-    var testVal;
-    if (map1.size !== map2.size) {
-      return false;
-    }
-    for (var [key, val] of map1) {
-      testVal = map2.get(key);
-      // in cases of an undefined value, make sure the key
-      // actually exists on the object so there are no false positives
-      if (
-        testVal !== val ||
-        (testVal === undefined && !map2.has(key))
-      ) {
-        return false;
-      }
-    }
-    return true;
-  };
-
   const getStyle = () => {
     return {
       width: '10rem',
       height: '15em',
-      background: 'green',
+      background: 'lightgreen',
+      textDecoration: 'none',
     };
   };
 
   const getAllCards = () => {
     const cards = [];
-    //console.log(cardValues);
 
     resultMap.forEach((k, v) => {
       cards.push(
-        <PokerCard key={v} value={k} style={getStyle()} footer={v} />,
+        <PokerCard
+          key={v}
+          value={k}
+          style={getStyle()}
+          footer={v.substring(0, v.indexOf('@')).toUpperCase()}
+        />,
       );
     });
 
@@ -96,6 +80,27 @@ const Result = (props) => {
       )}
     </div>
   );
+};
+
+const compareMaps = (map1, map2) => {
+  let testVal;
+  if (map1.size !== map2.size) {
+    return false;
+  }
+
+  for (const [key, val] of map1) {
+    testVal = map2.get(key);
+    // in cases of an undefined value, make sure the key
+    // actually exists on the object so there are no false positives
+    if (
+      testVal !== val ||
+      (testVal === undefined && !map2.has(key))
+    ) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 Result.propTypes = {};

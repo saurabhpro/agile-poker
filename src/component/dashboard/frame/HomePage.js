@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Row } from 'react-bootstrap';
 
-import CardPanel from './frame/CardPanel';
-import RightSidePanel from './frame/RightSidePanel';
+import CardPanel from './CardPanel';
+import RightSidePanel from './RightSidePanel';
 
 const HomePage = ({ userName }) => {
   return (
