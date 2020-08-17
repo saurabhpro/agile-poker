@@ -15,4 +15,9 @@ const getCurrentlyLoggedInUserDetails = async (userName) => {
   return { ...doc.data() };
 };
 
-export { getCurrentlyLoggedInUserDetails };
+const removeAllTaskStoryPoints = async (taskId) => {
+  await database.collection('result').doc(taskId).delete();
+  console.log('Deleted all Results: ');
+};
+
+export { getCurrentlyLoggedInUserDetails, removeAllTaskStoryPoints };

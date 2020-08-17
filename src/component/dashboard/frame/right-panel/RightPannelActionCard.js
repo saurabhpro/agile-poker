@@ -2,9 +2,11 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
 import './RighSideCard.css';
+import { removeAllTaskStoryPoints } from '../../../utils/firebaseDb';
 
 const RightPannelActionCard = ({ currentUser, style }) => {
   const reset = () => {
+    removeAllTaskStoryPoints('IND-01');
     window.location.href = `${process.env.PUBLIC_URL}/`;
   };
 
