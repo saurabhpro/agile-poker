@@ -1,24 +1,14 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import HomePage from './HomePage';
-import Landing from './Landing';
+import HomePage from './frame/HomePage';
+import sessionStoreUserName from '../utils/sessionStore';
+import SignIn from '../auth/SignIn';
 
 export default function Dashboard() {
-  const [value, setValue] = React.useState(
-    sessionStorage.getItem('agilePokerUserName') || '',
-  );
+  const userName = sessionStoreUserName();
+
   return (
     <div>
-      {!value && <HomePage />}
-
-      {value && (
-        <Container
-          fluid="sm"
-          className="mr-4 p-1 flex-fill justify-content-center"
-        >
-          <Landing userName={value} logout={setValue} />
-        </Container>
-      )}
+      {userName ? <HomePage userName={userName} /> : <SignIn />}
     </div>
   );
 }

@@ -23,9 +23,18 @@ https://saurabhpro.github.io/agile-poker/
 "postbuild": "(rm -rf agile-poker/_) & (mv build/_ agile-poker)"
 
 ## cards
-
-https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers
+- https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers
 
 ## UI
+- https://freefrontend.com/css-card-hover-effects/
+- https://material-ui.com/getting-started/templates/
 
-https://material-ui.com/getting-started/templates/
+## firebase
+- https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial
+- https://www.robinwieruch.de/firebase-tutorial
+- https://css-tricks.com/building-a-real-time-chat-app-with-react-and-firebase/
+- https://sebhastian.com/react-firebase-real-time-database-guide
+
+## react
+- https://itnext.io/add-state-and-lifecycle-methods-to-function-components-with-react-hooks-8e2bdc44d43d
+- https://medium.com/@andrewmyint/infinite-loop-inside-useeffect-react-hooks-6748de62871

@@ -1,0 +1,11 @@
+.team {
+    border-color: black;
+    border-width: 20px;
+ 
+    font-family: helvetica;
+}
+
+.team>h2 {
+    border: 2em;
+    border-bottom: 5px;
+}

@@ -1,15 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import {
   IconButton,
   AppBar,
   Toolbar,
   Typography,
+  Fab,
+  Tooltip,
 } from '@material-ui/core';
-
 import { makeStyles } from '@material-ui/core/styles';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import sessionStoreUserName from '../utils/sessionStore';
+import signOut from '../auth/SignOut';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -32,10 +36,30 @@ const useStyles = makeStyles((theme) => ({
   link: {
     margin: theme.spacing(1, 1.5),
   },
+  fab: {
+    height: '3em',
+    width: '3em',
+  },
 }));
 
-const Header = (props) => {
+/**
+ * Header Component
+ *
+ */
+const Header = () => {
   const classes = useStyles();
+
+  const [user, setUser] = React.useState(sessionStoreUserName());
+
+  /**
+   * clears the session store and then href
+   */
+  const clearSessionStore = () => {
+    signOut();
+    setUser(undefined);
+  };
+
+  const loggedIn = !!user;
 
   return (
     <div>
@@ -66,16 +90,36 @@ const Header = (props) => {
               // </Link>
             }
           </nav>
-
-          <IconButton>
-            <AccountCircleIcon />
-          </IconButton>
+          {loggedIn && (
+            <div>
+              {' '}
+              <Tooltip title="Profile" arrow>
+                <IconButton
+                  onClick={() =>
+                    alert('you found a hidden feature ;)')
+                  }
+                >
+                  <Fab color="primary" className={classes.fab}>
+                    <AccountCircleIcon />
+                  </Fab>
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Logout" arrow>
+                <IconButton
+                  //href={`${process.env.PUBLIC_URL}/`}
+                  onClick={() => clearSessionStore()}
+                >
+                  <Fab color="secondary" className={classes.fab}>
+                    <ExitToAppIcon />
+                  </Fab>
+                </IconButton>
+              </Tooltip>
+            </div>
+          )}
         </Toolbar>
       </AppBar>
     </div>
   );
 };
-
-Header.propTypes = {};
 
 export default Header;

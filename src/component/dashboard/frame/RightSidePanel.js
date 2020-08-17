@@ -1,46 +1,38 @@
 import React from 'react';
-import { Card, Button, Row } from 'react-bootstrap';
-import Team from '../team/Team';
+import { Container } from 'react-bootstrap';
 
-const style = { width: '18rem', margin: '1em', border: 'none' };
+import { getCurrentlyLoggedInUserDetails } from '../../utils/firebaseDb';
+import RightPannelActionCard from './right-panel/RightPannelActionCard';
+import RightPannelTeamStatusCard from './right-panel/RightPannelTeamStatusCard';
 
-export default function RightSidePanel(props) {
-  const clearSessionStore = () => {
-    console.log(props);
-    sessionStorage.clear();
-    props.logout(undefined);
-  };
+const style = { border: 'none' };
+
+export default function RightSidePanel({ userName }) {
+  const [currentUser, setCurrentUser] = React.useState();
+
+  React.useEffect(() => {
+    const getCurrentUser = () => {
+      getCurrentlyLoggedInUserDetails(userName).then((usr) =>
+        setCurrentUser(usr),
+      );
+    };
+
+    if (!currentUser) {
+      getCurrentUser();
+    }
+  }, [currentUser, userName]);
 
   return (
     <div>
-      <Row>
-        <Card style={style}>
-          <Card.Body>
-            <Card.Title>Current User</Card.Title>
-            {props.userName}
-            <Button type="submit" onClick={() => clearSessionStore()}>
-              Go Out
-            </Button>
-          </Card.Body>
-        </Card>
-      </Row>
-      <Row>
-        <Card style={style}>
-          <Card.Body>
-            <Card.Title>Team</Card.Title>
-            <Team />
-          </Card.Body>
-        </Card>
-      </Row>
-      <Row>
-        <Card style={style}>
-          <Card.Body>
-            <Card.Title>Poker</Card.Title>
-            <Card.Text>Just select one</Card.Text>
-            <Button variant="primary">Reset</Button>
-          </Card.Body>
-        </Card>
-      </Row>
+      {currentUser && (
+        <Container className="justify-content-center">
+          <RightPannelActionCard
+            currentUser={currentUser}
+            style={style}
+          />
+          <RightPannelTeamStatusCard style={style} />
+        </Container>
+      )}
     </div>
   );
 }

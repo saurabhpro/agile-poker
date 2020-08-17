@@ -1,5 +1,5 @@
 import React from 'react';
-import AllCardsPanel from '../../poker-card/AllCardsPanel';
+import AllCardsPanel from './poker-card/AllCardsPanel';
 
 export default function CardPanel() {
   return (
