@@ -7,7 +7,7 @@ let component;
 describe('center card panel', () => {
   beforeAll(() => {
     component = shallow(<CardPanel />);
-    //console.debug(component.debug());
+    console.debug("This was prited",component.debug());
   });
 
   it('matches the rendered snapshot', () => {
