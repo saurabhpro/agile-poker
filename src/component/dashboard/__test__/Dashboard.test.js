@@ -11,7 +11,7 @@ let component;
 describe(' dashboard without authentication', () => {
   beforeAll(() => {
     component = shallow(<Dashboard />);
-    console.debug(component.debug());
+    console.log(component.debug());
   });
 
   it('renders correctly', () => {
