@@ -38,3 +38,6 @@ https://saurabhpro.github.io/agile-poker/
 ## react
 - https://itnext.io/add-state-and-lifecycle-methods-to-function-components-with-react-hooks-8e2bdc44d43d
 - https://medium.com/@andrewmyint/infinite-loop-inside-useeffect-react-hooks-6748de62871
+
+## jest
+- https://jestjs.io/docs/en/expect

@@ -20,40 +20,41 @@ export default function SignIn() {
     setUserName(event.target.value);
   };
 
+  /**
+   * async method to fetch the user from firebase
+   * and if found set it to be online and active
+   */
   async function getAndSetUser() {
-    // [START getAndSetUser]
     const userRef = database.collection('users').doc(userName);
     const doc = await userRef.get();
 
     if (doc.exists) {
       setUser(doc.data());
     }
-    // [END getAndSetUser]
   }
 
-  async function setUser(doc) {
-    // [START setUser]
-    const data = {
-      userName: doc.userName,
-      isOnline: true,
-      isActive: true,
-      memberSince: doc.memberSince,
-      team: doc.team,
-      role: doc.role,
-    };
+  /**
+   * aysnc method to update the firebae document with the actived and online user
+   * @param {*} doc the firebase document
+   */
+  const setUser = async (doc) => {
+    const data = updateUserToOnline(doc);
 
     // Add a new document in collection "cities" with ID 'LA'
     const res = await database
       .collection('users')
       .doc(userName)
       .set(data);
-    // [END setUser]
 
     console.log('Set logged in user: ', res);
     // allow refreshing the page - and since our update was sucessful - we wil see home page
     window.location.href = `${process.env.PUBLIC_URL}/`;
-  }
+  };
 
+  /**
+   * handles the form submission from the sign in screen
+   * @param {*} event
+   */
   const onSubmit = (event) => {
     event.preventDefault();
 
@@ -64,6 +65,9 @@ export default function SignIn() {
     }
   };
 
+  /**
+   * material ui classes for sign in screen
+   */
   const classes = styles();
 
   return (
@@ -104,3 +108,18 @@ export default function SignIn() {
     </Container>
   );
 }
+
+/**
+ * Updates the doc to be online and active
+ * @param {*} doc
+ */
+export const updateUserToOnline = (doc) => {
+  return {
+    userName: doc.userName,
+    isOnline: true,
+    isActive: true,
+    memberSince: doc.memberSince,
+    team: doc.team,
+    role: doc.role,
+  };
+};
