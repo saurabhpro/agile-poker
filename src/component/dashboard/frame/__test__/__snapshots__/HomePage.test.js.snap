@@ -1,3 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`main center page after successful login matches the rendered snapshot 1`] = `ShallowWrapper {}`;
+exports[`main center page after successful login matches the rendered snapshot 1`] = `
+<div
+  className="container-md content-justify-center-sm"
+  style={
+    Object {
+      "flexGrow": 3,
+    }
+  }
+>
+  <Row
+    noGutters={false}
+  >
+    <div
+      className="col-sm-9"
+    >
+      <CardPanel />
+    </div>
+    <div
+      className="col-md"
+    >
+      <RightSidePanel />
+    </div>
+  </Row>
+</div>
+`;

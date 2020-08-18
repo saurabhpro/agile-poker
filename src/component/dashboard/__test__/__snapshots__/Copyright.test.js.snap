@@ -1,3 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`copyright message matches the rendered snapshot 1`] = `ShallowWrapper {}`;
+exports[`copyright message matches the rendered snapshot 1`] = `
+<WithStyles(ForwardRef(Typography))
+  align="center"
+  color="textSecondary"
+  variant="body2"
+>
+  Copyright © 
+  <WithStyles(ForwardRef(Link))
+    color="inherit"
+    href="https://github.com/saurabhpro/"
+  >
+    Saurabh
+  </WithStyles(ForwardRef(Link))>
+   
+  2020
+  .
+</WithStyles(ForwardRef(Typography))>
+`;
