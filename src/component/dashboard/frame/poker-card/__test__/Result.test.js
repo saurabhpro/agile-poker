@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CardPanel from '../CardPanel';
+import Result from '../Result';
 
 let component;
 
-describe('center card panel', () => {
+describe('result from poker card panel', () => {
   beforeAll(() => {
-    component = shallow(<CardPanel />);
+    component = shallow(<Result />);
     //console.debug("This was prited",component.debug());
   });
 
@@ -14,8 +14,7 @@ describe('center card panel', () => {
     expect(component).toMatchSnapshot();
   });
 
-
-  it('should render one <AllCardsPanel>', () => {
-    expect(component.find('AllCardsPanel')).toHaveLength(1);
+  it('should render one <CardDeck>', () => {
+    expect(component.find('CardDeck')).toHaveLength(0);
   });
 });

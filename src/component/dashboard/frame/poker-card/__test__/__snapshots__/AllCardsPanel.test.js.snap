@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cards with story points panel matches the rendered snapshot 1`] = `
+<div>
+  <CardDeck
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": "20px",
+        "marginTop": "10px",
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`result from poker card panel matches the rendered snapshot 1`] = `
+<Card
+  body={false}
+  className="rightCard teamCard"
+  style={
+    Object {
+      "border": "none",
+    }
+  }
+>
+  <CardBody>
+    <Team
+      className="title"
+    />
+  </CardBody>
+</Card>
+`;
