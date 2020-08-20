@@ -3,6 +3,7 @@
 exports[`cards with story points panel matches the rendered snapshot 1`] = `
 <div>
   <CardDeck
+    className="cards"
     style={
       Object {
         "flexDirection": "row",
