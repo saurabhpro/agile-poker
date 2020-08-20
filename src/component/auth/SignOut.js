@@ -11,9 +11,11 @@ export default function signOut() {
   unsetUser(userName);
 }
 
+/**
+ * aysnc method to mark the currently active user offline
+ * @param {*} user the username or primary key of firebase document
+ */
 async function unsetUser(user) {
-  // [START unsetUser]
-
   const userRef = database.collection('users').doc(user);
 
   try {
@@ -31,7 +33,6 @@ async function unsetUser(user) {
       },
       { merge: true },
     );
-    // [END unsetUser]
 
     console.log('Set: ', res);
 

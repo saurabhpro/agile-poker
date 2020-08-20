@@ -2,8 +2,8 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 
 import { getCurrentlyLoggedInUserDetails } from '../../utils/firebaseDb';
-import RightPannelActionCard from './right-panel/RightPannelActionCard';
-import RightPannelTeamStatusCard from './right-panel/RightPannelTeamStatusCard';
+import RightPanelActionCard from './right-panel/RightPanelActionCard';
+import RightPanelTeamStatusCard from './right-panel/RightPanelTeamStatusCard';
 
 const style = { border: 'none' };
 
@@ -26,11 +26,11 @@ export default function RightSidePanel({ userName }) {
     <div>
       {currentUser && (
         <Container className="justify-content-center">
-          <RightPannelActionCard
+          <RightPanelActionCard
             currentUser={currentUser}
             style={style}
           />
-          <RightPannelTeamStatusCard style={style} />
+          <RightPanelTeamStatusCard style={style} />
         </Container>
       )}
     </div>

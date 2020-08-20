@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap';
 import Team from './team/Team';
 import './RighSideCard.css';
 
-const RightPannelTeamStatusCard = ({ style }) => {
+const RightPanelTeamStatusCard = ({ style }) => {
   return (
     <Card className="rightCard teamCard" style={style}>
       <Card.Body>
@@ -14,4 +14,4 @@ const RightPannelTeamStatusCard = ({ style }) => {
   );
 };
 
-export default RightPannelTeamStatusCard;
+export default RightPanelTeamStatusCard;

@@ -38,3 +38,11 @@ https://saurabhpro.github.io/agile-poker/
 ## react
 - https://itnext.io/add-state-and-lifecycle-methods-to-function-components-with-react-hooks-8e2bdc44d43d
 - https://medium.com/@andrewmyint/infinite-loop-inside-useeffect-react-hooks-6748de62871
+
+## jest
+- https://jestjs.io/docs/en/expect
+
+- https://devhints.io/
+- https://blog.logrocket.com/react-router-hooks-will-make-your-component-cleaner/
+- https://www.learnhowtoprogram.com/react-part-time-react-track/functional-programming-with-javascript/introduction-to-functional-programming
+- https://blog.bitsrc.io/understanding-javascript-async-and-await-with-examples-a010b03926ea

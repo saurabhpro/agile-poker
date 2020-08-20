@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` dashboard with authentication renders correctly 1`] = `
+<div>
+  <HomePage
+    userName="Saurabh"
+  />
+</div>
+`;
+
+exports[` dashboard without authentication renders correctly 1`] = `
+<div>
+  <SignIn />
+</div>
+`;

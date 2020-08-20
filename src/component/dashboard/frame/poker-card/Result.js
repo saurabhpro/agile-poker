@@ -67,7 +67,7 @@ const Result = (props) => {
 
   return (
     <div>
-      {resultMap && (
+      {resultMap && resultMap.length > 0 && (
         <CardDeck
           style={{
             flexDirection: 'row',
