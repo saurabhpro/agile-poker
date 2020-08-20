@@ -1,0 +1,7 @@
+@media screen and (min-width: 20em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}

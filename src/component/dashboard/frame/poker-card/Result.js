@@ -4,6 +4,8 @@ import database from '../../../Firebase';
 import PokerCard from './PokerCard';
 import { CardDeck } from 'react-bootstrap';
 
+import './cards.css';
+
 const Result = (props) => {
   const [resultMap, setResultMap] = React.useState(new Map());
 
@@ -43,8 +45,9 @@ const Result = (props) => {
     return {
       width: '10rem',
       height: '15em',
-      background: 'lightgreen',
-      textDecoration: 'none',
+      background: 'black',
+      color: 'cyan',
+      fontWeight: 'bold',
     };
   };
 
@@ -67,8 +70,9 @@ const Result = (props) => {
 
   return (
     <div>
-      {resultMap && resultMap.length > 0 && (
+      {resultMap && resultMap.size > 0 && (
         <CardDeck
+          className="cards noHover"
           style={{
             flexDirection: 'row',
             marginTop: '10px',

@@ -7,6 +7,8 @@ import PokerCard from './PokerCard';
 import database from '../../../Firebase';
 import sessionStoreUserName from '../../../utils/sessionStore';
 
+import './cards.css';
+
 export default function AllCardsPanel() {
   const userName = sessionStoreUserName();
   const [cardValues, setCardValues] = useState([]);
@@ -79,6 +81,7 @@ export default function AllCardsPanel() {
     <div>
       {!showResult ? (
         <CardDeck
+          className="cards"
           style={{
             flexDirection: 'row',
             marginTop: '10px',

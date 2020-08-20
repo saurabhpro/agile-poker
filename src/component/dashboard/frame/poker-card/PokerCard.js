@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 
-import './PokerCard.css';
+import './card.css';
 import infinity from './icon/infinity.svg';
 
 class PokerCard extends Component {
@@ -21,7 +21,12 @@ class PokerCard extends Component {
     return this.state.value.storyPoint !== 'Infinity' ? (
       this.state.value.storyPoint
     ) : (
-      <Card.Img variant="center" src={infinity} alt="Infinity" />
+      <Card.Img
+        className="pokerCard__infinity"
+        variant="center"
+        src={infinity}
+        alt="Infinity"
+      />
     );
   };
 
@@ -30,24 +35,22 @@ class PokerCard extends Component {
   };
 
   render() {
-    const storePoint = this.getDisplayableValue();
+    const storyPoint = this.getDisplayableValue();
     const { value } = this.state;
 
     return (
       <div>
         <Card
           style={value.style}
-          className="m-1 pokerCard"
+          className="m-2 pokerCard"
           id={value.storyPoint}
           onClick={() => this.onClick(value.storyPoint)}
         >
           <Card.Body>
-            <h4>{storePoint}</h4>
+            <h4>{storyPoint}</h4>
           </Card.Body>
           {this.props.footer && (
-            <Card.Footer className="pokerCard__footer">
-              {this.props.footer}
-            </Card.Footer>
+            <p className="pokerCard__footer">{this.props.footer}</p>
           )}
         </Card>
       </div>
