@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/agile-poker/static/css/main.72eee1be.chunk.css",
-    "main.js": "/agile-poker/static/js/main.7229366c.chunk.js",
-    "main.js.map": "/agile-poker/static/js/main.7229366c.chunk.js.map",
+    "main.css": "/agile-poker/static/css/main.050019ee.chunk.css",
+    "main.js": "/agile-poker/static/js/main.186d66c4.chunk.js",
+    "main.js.map": "/agile-poker/static/js/main.186d66c4.chunk.js.map",
     "runtime-main.js": "/agile-poker/static/js/runtime-main.e77ec55f.js",
     "runtime-main.js.map": "/agile-poker/static/js/runtime-main.e77ec55f.js.map",
     "static/css/2.11829350.chunk.css": "/agile-poker/static/css/2.11829350.chunk.css",
-    "static/js/2.d7bc411b.chunk.js": "/agile-poker/static/js/2.d7bc411b.chunk.js",
-    "static/js/2.d7bc411b.chunk.js.map": "/agile-poker/static/js/2.d7bc411b.chunk.js.map",
+    "static/js/2.248cda70.chunk.js": "/agile-poker/static/js/2.248cda70.chunk.js",
+    "static/js/2.248cda70.chunk.js.map": "/agile-poker/static/js/2.248cda70.chunk.js.map",
     "index.html": "/agile-poker/index.html",
-    "precache-manifest.13c564adba4bd018d1405af221137b91.js": "/agile-poker/precache-manifest.13c564adba4bd018d1405af221137b91.js",
+    "precache-manifest.25cbba8387a881840cadd4facf8638fd.js": "/agile-poker/precache-manifest.25cbba8387a881840cadd4facf8638fd.js",
     "service-worker.js": "/agile-poker/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/agile-poker/static/css/2.11829350.chunk.css.map",
-    "static/css/main.72eee1be.chunk.css.map": "/agile-poker/static/css/main.72eee1be.chunk.css.map",
-    "static/js/2.d7bc411b.chunk.js.LICENSE.txt": "/agile-poker/static/js/2.d7bc411b.chunk.js.LICENSE.txt",
+    "static/css/main.050019ee.chunk.css.map": "/agile-poker/static/css/main.050019ee.chunk.css.map",
+    "static/js/2.248cda70.chunk.js.LICENSE.txt": "/agile-poker/static/js/2.248cda70.chunk.js.LICENSE.txt",
     "static/media/infinity.svg": "/agile-poker/static/media/infinity.cf7b1a96.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e77ec55f.js",
     "static/css/2.11829350.chunk.css",
-    "static/js/2.d7bc411b.chunk.js",
-    "static/css/main.72eee1be.chunk.css",
-    "static/js/main.7229366c.chunk.js"
+    "static/js/2.248cda70.chunk.js",
+    "static/css/main.050019ee.chunk.css",
+    "static/js/main.186d66c4.chunk.js"
   ]
 }
