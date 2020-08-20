@@ -12,6 +12,7 @@ https://saurabhpro.github.io/agile-poker/
 - just enter anything in login page
 - and thats's it ;)
 
+![app](demo/app-demo.png)
 
 ### Start
 
@@ -46,3 +47,6 @@ https://saurabhpro.github.io/agile-poker/
 - https://blog.logrocket.com/react-router-hooks-will-make-your-component-cleaner/
 - https://www.learnhowtoprogram.com/react-part-time-react-track/functional-programming-with-javascript/introduction-to-functional-programming
 - https://blog.bitsrc.io/understanding-javascript-async-and-await-with-examples-a010b03926ea
+
+## css 
+- https://getflywheel.com/layout/flexbox-create-modern-card-design-layout/
