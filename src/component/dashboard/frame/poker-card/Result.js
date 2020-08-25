@@ -6,25 +6,28 @@ import { CardDeck } from 'react-bootstrap';
 
 import './cards.css';
 
-const Result = (props) => {
+const Result = ({ currentUser }) => {
   const [resultMap, setResultMap] = React.useState(new Map());
 
   React.useEffect(() => {
     const voteRef = database
       .collection('result')
-      .doc('IND-01')
-      .collection('users');
+      .doc(currentUser.team);
 
     const data = new Map();
 
     const observer = voteRef.onSnapshot(
-      (querySnapshot) => {
-        console.log(
-          `Received query snapshot of size ${querySnapshot.size}`,
-        );
+      (doc) => {
+        console.log(`Received query snapshot of ${doc.data()}`);
 
-        querySnapshot.forEach((doc) => {
-          data.set(doc.id, doc.data().storyPoint);
+        if (!doc.data().members) {
+          window.location.href = `${process.env.PUBLIC_URL}/`;
+        }
+
+        doc.data().members.forEach((m) => {
+          if (m.member && m.storyPoint) {
+            data.set(m.member, m.storyPoint);
+          }
         });
 
         if (!compareMaps(data, resultMap)) {
@@ -39,7 +42,7 @@ const Result = (props) => {
     return () => {
       observer();
     };
-  }, [resultMap]);
+  }, [resultMap, currentUser.team]);
 
   const getStyle = () => {
     return {
@@ -53,14 +56,15 @@ const Result = (props) => {
 
   const getAllCards = () => {
     const cards = [];
-
+    console.log(resultMap);
     resultMap.forEach((k, v) => {
+      console.log(k, v);
       cards.push(
         <PokerCard
           key={v}
           value={k}
           style={getStyle()}
-          footer={v.substring(0, v.indexOf('@')).toUpperCase()}
+          footer={v.toUpperCase()}
         />,
       );
     });

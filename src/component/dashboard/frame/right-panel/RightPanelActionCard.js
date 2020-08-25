@@ -2,12 +2,19 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
 import './RighSideCard.css';
-import { removeAllTaskStoryPoints } from '../../../utils/firebaseDb';
+import { removeTasksOfTeam } from '../../../utils/firebaseDb';
+import TaskIdManager from './TaskIdManager';
 
 const RightPanelActionCard = ({ currentUser, style }) => {
   const reset = () => {
-    removeAllTaskStoryPoints('IND-01');
-    window.location.href = `${process.env.PUBLIC_URL}/`;
+    removeTasksOfTeam(currentUser.team, '')
+      .then(() => {
+        window.location.href = `${process.env.PUBLIC_URL}/`;
+        console.log('Document successfully deleted!');
+      })
+      .catch((error) => {
+        console.error('Error removing document: ', error);
+      });
   };
 
   return (
@@ -25,11 +32,19 @@ const RightPanelActionCard = ({ currentUser, style }) => {
             : 'TEAM MEMBER'}
         </p>
 
+        <TaskIdManager
+          team={currentUser.team}
+          role={currentUser.role.toUpperCase()}
+        />
+
         {(currentUser.role.toUpperCase() === 'SCRUM MASTER' ||
           currentUser.role.toUpperCase() === 'PRODUCT OWNER') && (
-          <Button block onClick={() => reset()} variant="Link">
-            Reset
-          </Button>
+          <div>
+            {' '}
+            <Button block onClick={() => reset()} variant="Link">
+              Reset
+            </Button>
+          </div>
         )}
       </Card.Body>
     </Card>

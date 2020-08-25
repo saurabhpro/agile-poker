@@ -94,15 +94,15 @@ const Header = () => {
             <div>
               {' '}
               <Tooltip title="Profile" arrow>
-                <IconButton
+                <Fab
+                  color="primary"
+                  className={classes.fab}
                   onClick={() =>
                     alert('you found a hidden feature ;)')
                   }
                 >
-                  <Fab color="primary" className={classes.fab}>
-                    <AccountCircleIcon />
-                  </Fab>
-                </IconButton>
+                  <AccountCircleIcon />
+                </Fab>
               </Tooltip>
               <Tooltip title="Logout" arrow>
                 <IconButton

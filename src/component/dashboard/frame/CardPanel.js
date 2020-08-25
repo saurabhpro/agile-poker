@@ -1,10 +1,10 @@
 import React from 'react';
 import AllCardsPanel from './poker-card/AllCardsPanel';
 
-export default function CardPanel() {
+export default function CardPanel({currentUser}) {
   return (
     <div>
-      <AllCardsPanel />
+      <AllCardsPanel currentUser={currentUser}/>
     </div>
   );
 }

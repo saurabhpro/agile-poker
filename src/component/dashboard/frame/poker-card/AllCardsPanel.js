@@ -5,12 +5,11 @@ import Result from './Result';
 import PokerCard from './PokerCard';
 
 import database from '../../../Firebase';
-import sessionStoreUserName from '../../../utils/sessionStore';
 
 import './cards.css';
+import { getTaskForTeam } from '../../../utils/firebaseDb';
 
-export default function AllCardsPanel() {
-  const userName = sessionStoreUserName();
+export default function AllCardsPanel({ currentUser }) {
   const [cardValues, setCardValues] = useState([]);
   const [selectedSP, setSelectedSP] = useState(undefined);
   const [showResult, setShowResult] = useState(false);
@@ -37,17 +36,32 @@ export default function AllCardsPanel() {
     setSelectedSP(value);
 
     // Add a new document in collection "result/task/users" with ID 'userName'
-    const res = database
-      .collection('result')
-      .doc('IND-01')
-      .collection('users')
-      .doc(userName)
-      .set({ storyPoint: value });
 
-    console.log('Stored Result: ', res);
+    getTaskForTeam(currentUser.team).then((task) => {
+      console.log(task);
+      if (task.taskId) {
+        // Add a new document in collection "result/team/members(map)" with ID 'userName'
+        const res2 = database
+          .collection('result')
+          .doc(currentUser.team)
+          .set(
+            {
+              members: [
+                ...task.members,
+                { member: currentUser.userName, storyPoint: value },
+              ],
+            },
+            { merge: true },
+          );
 
-    setShowResult(true);
-    setCardValues([value]);
+        if (res2.exists) {
+          console.log('Stored Result: ', res2.data());
+        }
+
+        setShowResult(true);
+        setCardValues([value]);
+      }
+    });
   };
 
   const getStyle = (value) => {
@@ -91,7 +105,7 @@ export default function AllCardsPanel() {
           {getAllCards()}
         </CardDeck>
       ) : (
-        <Result />
+        <Result currentUser={currentUser} />
       )}
     </div>
   );
