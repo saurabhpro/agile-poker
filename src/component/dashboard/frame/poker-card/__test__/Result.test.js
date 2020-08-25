@@ -4,9 +4,18 @@ import Result from '../Result';
 
 let component;
 
+const user = {
+  userName: 'Saurabh',
+  isOnline: false,
+  isActive: false,
+  memberSince: new Date(2020, 20, 8),
+  team: 'r2unit',
+  role: 'Scrum Master',
+};
+
 describe('result from poker card panel', () => {
   beforeAll(() => {
-    component = shallow(<Result />);
+    component = shallow(<Result currentUser={user} />);
     //console.debug("This was prited",component.debug());
   });
 
