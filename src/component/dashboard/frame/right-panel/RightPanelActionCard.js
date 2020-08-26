@@ -41,14 +41,15 @@ const RightPanelActionCard = ({ currentUser, style }) => {
           setShowReset={setShowReset}
         />
 
-        {showReset && (
-          <div>
-            {' '}
-            <Button block onClick={() => reset()} variant="Link">
-              Reset
-            </Button>
-          </div>
-        )}
+        {showReset &&
+          currentUser.role.toUpperCase() !== 'TEAM MEMBER' && (
+            <div>
+              {' '}
+              <Button block onClick={() => reset()} variant="light">
+                Reset
+              </Button>
+            </div>
+          )}
       </Card.Body>
     </Card>
   );

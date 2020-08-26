@@ -8,20 +8,5 @@ exports[`main center page after successful login matches the rendered snapshot 1
       "flexGrow": 3,
     }
   }
->
-  <Row
-    noGutters={false}
-  >
-    <div
-      className="col-sm-9"
-    >
-      <CardPanel />
-    </div>
-    <div
-      className="col-md"
-    >
-      <RightSidePanel />
-    </div>
-  </Row>
-</div>
+/>
 `;

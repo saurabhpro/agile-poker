@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { CardDeck } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+
+import { CardDeck } from 'react-bootstrap';
+import IconButton from '@material-ui/core/IconButton';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 
 import Result from './Result';
 import PokerCard from './PokerCard';
 import database from '../../../Firebase';
 import './cards.css';
 import { getTaskForTeam } from '../../../utils/firebaseDb';
+import { Tooltip } from '@material-ui/core';
 
 export default function AllCardsPanel({ currentUser }) {
   const [cardValues, setCardValues] = useState([]);
@@ -91,6 +95,19 @@ export default function AllCardsPanel({ currentUser }) {
 
   return (
     <div>
+      {currentUser?.role.toUpperCase() === 'PRODUCT OWNER' && (
+        <Tooltip title="Show Result">
+          <IconButton
+            color="secondary"
+            className="float-right"
+            style={{ borderColor: 'black' }}
+            onClick={() => setShowResult(true)}
+          >
+            <VisibilityIcon />
+          </IconButton>
+        </Tooltip>
+      )}
+
       {!showResult ? (
         <CardDeck
           className="cards"

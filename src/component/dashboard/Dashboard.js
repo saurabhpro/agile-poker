@@ -8,7 +8,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      {userName ? <HomePage userName={userName} /> : <SignIn />}
+      {!!userName ? <HomePage userName={userName} /> : <SignIn />}
     </div>
   );
 }

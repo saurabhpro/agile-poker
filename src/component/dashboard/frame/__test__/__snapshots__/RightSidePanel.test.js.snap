@@ -1,3 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`sign in page matches the rendered snapshot 1`] = `<div />`;
+exports[`sign in page matches the rendered snapshot 1`] = `
+<div>
+  <Container
+    className="justify-content-center"
+    fluid={false}
+  >
+    <RightPanelActionCard
+      currentUser={
+        Object {
+          "isActive": false,
+          "isOnline": false,
+          "memberSince": 2021-09-07T18:30:00.000Z,
+          "role": "Scrum Master",
+          "team": "r2unit",
+          "userName": "Saurabh",
+        }
+      }
+      style={
+        Object {
+          "border": "none",
+        }
+      }
+    />
+    <RightPanelTeamStatusCard
+      style={
+        Object {
+          "border": "none",
+        }
+      }
+    />
+  </Container>
+</div>
+`;

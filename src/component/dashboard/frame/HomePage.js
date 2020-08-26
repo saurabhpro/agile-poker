@@ -27,22 +27,22 @@ const HomePage = ({ userName }) => {
       className="container-md content-justify-center-sm"
       style={{ flexGrow: 3 }}
     >
-      <Row>
-        <div className="col-sm-9">
-          <CardPanel currentUser={currentUser}/>
-        </div>
-        <div className="col-md">
-          <RightSidePanel currentUser={currentUser} />
-        </div>
-      </Row>
+      {currentUser && (
+        <Row>
+          <div className="col-sm-9">
+            <CardPanel currentUser={currentUser} />
+          </div>
+          <div className="col-md">
+            <RightSidePanel currentUser={currentUser} />
+          </div>
+        </Row>
+      )}
     </div>
   );
 };
 
-
 CardPanel.propTypes = {
-  userName: PropTypes.object.isRequired,
+  currentUser: PropTypes.object.isRequired,
 };
-
 
 export default HomePage;

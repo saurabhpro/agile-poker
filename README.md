@@ -6,14 +6,14 @@
 
 [![Known Vulnerabilities](https://snyk.io/test/github/saurabhpro/agile-poker/badge.svg?targetFile=package.json)](https://snyk.io/test/github/saurabhpro/agile-poker?targetFile=package.json)
 
-
 ## Live
+
 https://saurabhpro.github.io/agile-poker/
+
 - just enter anything in login page
 - and thats's it ;)
 
 ![app](demo/app-demo.png)
-
 
 https://dev.to/otamnitram/react-useeffect-cleanup-how-and-when-to-use-it-2hbm
 
@@ -21,4 +21,5 @@ https://blog.logrocket.com/react-hooks-with-firebase-firestore/
 
 css
 
+https://www.eggradients.com/
 https://www.eggradients.com/color/cobalt-blue-color

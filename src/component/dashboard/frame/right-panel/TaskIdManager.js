@@ -58,7 +58,10 @@ const TaskIdManager = ({ team, role, setShowReset }) => {
   return (
     <div>
       {taskInputDisabled ? (
-        <h2 className="text-center" style={{ color: 'turquoise' }}>
+        <h2
+          className="my-2 text-center"
+          style={{ color: 'turquoise' }}
+        >
           {taskId}
         </h2>
       ) : (

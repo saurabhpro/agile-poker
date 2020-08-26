@@ -2,6 +2,17 @@
 
 exports[`center card panel matches the rendered snapshot 1`] = `
 <div>
-  <AllCardsPanel />
+  <AllCardsPanel
+    currentUser={
+      Object {
+        "isActive": false,
+        "isOnline": false,
+        "memberSince": 2021-09-07T18:30:00.000Z,
+        "role": "Scrum Master",
+        "team": "r2unit",
+        "userName": "Saurabh",
+      }
+    }
+  />
 </div>
 `;

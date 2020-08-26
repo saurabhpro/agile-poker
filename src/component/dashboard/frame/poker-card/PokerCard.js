@@ -60,7 +60,7 @@ class PokerCard extends Component {
 }
 
 PokerCard.propTypes = {
-  value: PropTypes.string.isRequired,
+  // value: PropTypes.string.isRequired, is number or string
   style: PropTypes.object.isRequired,
   onClick: PropTypes.func.isRequired,
 };
