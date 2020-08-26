@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { CardDeck } from 'react-bootstrap';
 
 import database from '../../../Firebase';
 import PokerCard from './PokerCard';
-import { CardDeck } from 'react-bootstrap';
-
 import './cards.css';
+import { compareMaps } from '../../../utils/mapCompare';
 
 const Result = ({ currentUser }) => {
   const [resultMap, setResultMap] = React.useState(new Map());
@@ -48,15 +49,15 @@ const Result = ({ currentUser }) => {
     return {
       width: '10rem',
       height: '15em',
-      background: 'black',
-      color: 'cyan',
+      //backgroundImage:  'linear-gradient(to bottom right, #add8e6, white)',
+      background: '#0047ab',
+      color: 'white',
       fontWeight: 'bold',
     };
   };
 
   const getAllCards = () => {
     const cards = [];
-    console.log(resultMap);
     resultMap.forEach((k, v) => {
       console.log(k, v);
       cards.push(
@@ -90,27 +91,8 @@ const Result = ({ currentUser }) => {
   );
 };
 
-const compareMaps = (map1, map2) => {
-  let testVal;
-  if (map1.size !== map2.size) {
-    return false;
-  }
-
-  for (const [key, val] of map1) {
-    testVal = map2.get(key);
-    // in cases of an undefined value, make sure the key
-    // actually exists on the object so there are no false positives
-    if (
-      testVal !== val ||
-      (testVal === undefined && !map2.has(key))
-    ) {
-      return false;
-    }
-  }
-
-  return true;
+Result.propTypes = {
+  currentUser: PropTypes.object.isRequired,
 };
-
-Result.propTypes = {};
 
 export default Result;

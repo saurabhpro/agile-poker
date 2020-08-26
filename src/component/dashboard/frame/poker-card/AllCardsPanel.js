@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { CardDeck } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 import Result from './Result';
 import PokerCard from './PokerCard';
-
 import database from '../../../Firebase';
-
 import './cards.css';
 import { getTaskForTeam } from '../../../utils/firebaseDb';
 
@@ -41,7 +40,7 @@ export default function AllCardsPanel({ currentUser }) {
       console.log(task);
       if (task.taskId) {
         // Add a new document in collection "result/team/members(map)" with ID 'userName'
-        const res2 = database
+        database
           .collection('result')
           .doc(currentUser.team)
           .set(
@@ -52,11 +51,10 @@ export default function AllCardsPanel({ currentUser }) {
               ],
             },
             { merge: true },
-          );
-
-        if (res2.exists) {
-          console.log('Stored Result: ', res2.data());
-        }
+          )
+          .then(() => {
+            console.log('Stored Result of pokering');
+          });
 
         setShowResult(true);
         setCardValues([value]);
@@ -110,3 +108,7 @@ export default function AllCardsPanel({ currentUser }) {
     </div>
   );
 }
+
+AllCardsPanel.propTypes = {
+  currentUser: PropTypes.object.isRequired,
+};

@@ -5,7 +5,7 @@ import { TextField } from '@material-ui/core';
 import { createEmptyTaskForTeam } from '../../../utils/firebaseDb';
 import database from '../../../Firebase';
 
-const TaskIdManager = ({ team, role }) => {
+const TaskIdManager = ({ team, role, setShowReset }) => {
   const [taskId, setTaskId] = React.useState();
 
   const [taskInputDisabled, setTaskInputDisabled] = React.useState(
@@ -17,18 +17,27 @@ const TaskIdManager = ({ team, role }) => {
   };
 
   React.useEffect(() => {
-    const observer = database
+    const unsubscribe = database
       .collection('result')
       .doc(team)
       .onSnapshot((doc) => {
-        setTaskId(doc.data().taskId?.toUpperCase());
+        if (doc.data().taskId) {
+          setTaskId(doc.data().taskId.toUpperCase());
+          setTaskInputDisabled(true);
+          setShowReset(true);
+        }
       });
 
     return () => {
-      observer();
+      unsubscribe();
     };
-  }, [taskId, team]);
+  }, [taskId, team, setShowReset]);
 
+  /**
+   * The PO or SM have powers to enter the task id which is required for voting
+   * just to ensure better UX - only do it on ENTER press
+   * @param {*} event
+   */
   const onTaskEnter = (event) => {
     // if enter is not pressed don't do anything
     if (event.charCode !== 13) {
@@ -38,16 +47,18 @@ const TaskIdManager = ({ team, role }) => {
     event.preventDefault();
 
     const task = event.target.value;
+    // store to db
     createEmptyTaskForTeam(team, task);
-    setTaskId(task.toUpperCase());
-
+    //refresh the ui
     setTaskInputDisabled(true);
+    setTaskId(task.toUpperCase());
+    setShowReset(true);
   };
 
   return (
     <div>
       {taskInputDisabled ? (
-        <h2 className="text-center" style={{ color: 'red' }}>
+        <h2 className="text-center" style={{ color: 'turquoise' }}>
           {taskId}
         </h2>
       ) : (
@@ -58,7 +69,7 @@ const TaskIdManager = ({ team, role }) => {
           onChange={onChange}
           fullWidth
           id="taskId"
-          //label="Task Id"
+          label="Task Id"
           name="taskId"
           autoFocus
           //disabled={taskInputDisabled}
@@ -72,6 +83,7 @@ const TaskIdManager = ({ team, role }) => {
 
 TaskIdManager.propTypes = {
   team: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
 };
 
 export default TaskIdManager;

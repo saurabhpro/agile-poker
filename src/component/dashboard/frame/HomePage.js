@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Row } from 'react-bootstrap';
 
@@ -37,5 +38,11 @@ const HomePage = ({ userName }) => {
     </div>
   );
 };
+
+
+CardPanel.propTypes = {
+  userName: PropTypes.object.isRequired,
+};
+
 
 export default HomePage;

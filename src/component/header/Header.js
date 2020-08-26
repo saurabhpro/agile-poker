@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     flexWrap: 'wrap',
-    backgroundColor: 'white',
+    //backgroundColor: '#ffac81',
+    //backgroundImage:'linear-gradient(315deg, #fff 75%, #ff928b 74%)',
   },
   toolbarTitle: {
     flexGrow: 1,
@@ -72,7 +73,7 @@ const Header = () => {
         <Toolbar className={classes.toolbar}>
           <Typography
             variant="h6"
-            color="inherit"
+            color="light"
             noWrap
             className={classes.toolbarTitle}
           >
@@ -92,28 +93,11 @@ const Header = () => {
           </nav>
           {loggedIn && (
             <div>
-              {' '}
-              <Tooltip title="Profile" arrow>
-                <Fab
-                  color="primary"
-                  className={classes.fab}
-                  onClick={() =>
-                    alert('you found a hidden feature ;)')
-                  }
-                >
-                  <AccountCircleIcon />
-                </Fab>
-              </Tooltip>
-              <Tooltip title="Logout" arrow>
-                <IconButton
-                  //href={`${process.env.PUBLIC_URL}/`}
-                  onClick={() => clearSessionStore()}
-                >
-                  <Fab color="secondary" className={classes.fab}>
-                    <ExitToAppIcon />
-                  </Fab>
-                </IconButton>
-              </Tooltip>
+              <Profile classes={classes} />
+              <Logout
+                classes={classes}
+                clearSessionStore={clearSessionStore}
+              />
             </div>
           )}
         </Toolbar>
@@ -123,3 +107,32 @@ const Header = () => {
 };
 
 export default Header;
+
+const Logout = ({ classes, clearSessionStore }) => {
+  return (
+    <Tooltip title="Logout" arrow>
+      <IconButton
+        //href={`${process.env.PUBLIC_URL}/`}
+        onClick={() => clearSessionStore()}
+      >
+        <Fab color="secondary" className={classes.fab}>
+          <ExitToAppIcon />
+        </Fab>
+      </IconButton>
+    </Tooltip>
+  );
+};
+
+const Profile = ({ classes }) => {
+  return (
+    <Tooltip title="Profile" arrow>
+      <Fab
+        color="primary"
+        className={classes.fab}
+        onClick={() => alert('you found a hidden feature ;)')}
+      >
+        <AccountCircleIcon />
+      </Fab>
+    </Tooltip>
+  );
+};

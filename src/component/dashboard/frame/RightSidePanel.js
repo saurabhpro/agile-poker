@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 
 import RightPanelActionCard from './right-panel/RightPanelActionCard';
@@ -21,3 +22,7 @@ export default function RightSidePanel({ currentUser }) {
     </div>
   );
 }
+
+RightSidePanel.propTypes = {
+  currentUser: PropTypes.object.isRequired,
+};

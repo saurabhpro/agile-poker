@@ -30,6 +30,10 @@ const removeTasksOfTeam = async (team) => {
   return await database.collection('result').doc(team).set({});
 };
 
+/**
+ * the complete result for the team is returned - used to get the story points and memeber name
+ * @param {*} team the team name as string
+ */
 const getTaskForTeam = async (team) => {
   const res = await database.collection('result').doc(team).get();
 
@@ -39,8 +43,11 @@ const getTaskForTeam = async (team) => {
   }
 };
 
+/**
+ * only get the changed task id immeditly
+ * @param {*} team
+ */
 const getTaskIdForTeam = (team) => {
-  
   database
     .collection('result')
     .doc(team)
@@ -49,6 +56,11 @@ const getTaskIdForTeam = (team) => {
     });
 };
 
+/**
+ * init the team result document with two properties - taskid and empty member array
+ * @param {*} team the team name
+ * @param {*} taskId the task id for the teams
+ */
 const createEmptyTaskForTeam = async (team, taskId) => {
   // Add a new document in collection "result/task/users" with ID 'userName'
   const res = await database.collection('result').doc(team).set({
@@ -59,10 +71,34 @@ const createEmptyTaskForTeam = async (team, taskId) => {
   console.log('Stored Result: ', taskId, ' ', res);
 };
 
+/**
+ * aysnc method to mark the currently active user offline
+ * @param {*} user the username or primary key of firebase document
+ */
+async function unsetUser(user) {
+  const userRef = database.collection('users').doc(user);
+
+  // try printing the user data
+  // const doc = await userRef.get();
+  // if (!doc.exists) {
+  //   console.log('No such document!');
+  // } else {
+  //   console.log('Document data:', doc.data());
+  // }
+
+  return await userRef.set(
+    {
+      isOnline: false,
+    },
+    { merge: true },
+  );
+}
+
 export {
   getCurrentlyLoggedInUserDetails,
   removeTasksOfTeam,
   getTaskForTeam,
   getTaskIdForTeam,
   createEmptyTaskForTeam,
+  unsetUser,
 };

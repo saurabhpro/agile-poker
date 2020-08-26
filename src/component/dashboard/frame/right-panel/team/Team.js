@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import TeamMember from './TeamMember';
 
@@ -23,7 +24,7 @@ const Team = ({ className }) => {
     <div>
       {teamName && (
         <div className="team">
-          <div className="team__title">
+          <div className="mb-2 team__title">
             <h5
               className={className}
             >{`${teamName.toUpperCase()}`}</h5>
@@ -34,6 +35,10 @@ const Team = ({ className }) => {
       )}
     </div>
   );
+};
+
+Team.propTypes = {
+  className: PropTypes.string.isRequired,
 };
 
 export default Team;

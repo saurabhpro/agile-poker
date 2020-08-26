@@ -1,11 +1,14 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 import './RighSideCard.css';
 import { removeTasksOfTeam } from '../../../utils/firebaseDb';
 import TaskIdManager from './TaskIdManager';
 
 const RightPanelActionCard = ({ currentUser, style }) => {
+  const [showReset, setShowReset] = React.useState(false);
+
   const reset = () => {
     removeTasksOfTeam(currentUser.team, '')
       .then(() => {
@@ -35,10 +38,10 @@ const RightPanelActionCard = ({ currentUser, style }) => {
         <TaskIdManager
           team={currentUser.team}
           role={currentUser.role.toUpperCase()}
+          setShowReset={setShowReset}
         />
 
-        {(currentUser.role.toUpperCase() === 'SCRUM MASTER' ||
-          currentUser.role.toUpperCase() === 'PRODUCT OWNER') && (
+        {showReset && (
           <div>
             {' '}
             <Button block onClick={() => reset()} variant="Link">
@@ -49,6 +52,11 @@ const RightPanelActionCard = ({ currentUser, style }) => {
       </Card.Body>
     </Card>
   );
+};
+
+RightPanelActionCard.propTypes = {
+  currentUser: PropTypes.object.isRequired,
+  style: PropTypes.object.isRequired,
 };
 
 export default RightPanelActionCard;

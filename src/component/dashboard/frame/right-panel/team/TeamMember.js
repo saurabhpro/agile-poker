@@ -1,12 +1,49 @@
 import React, { useState, useEffect } from 'react';
 
+import PropTypes from 'prop-types';
+
 import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
+
 import { Tooltip } from '@material-ui/core';
-
 import database from '../../../../Firebase';
-
 import './TeamMember.css';
+import { arrayObjectEquals } from '../../../../utils/compareArrayObject';
+
+const TeamMemberDetail = ({ usr }) => {
+  return (
+    <div className="teamMember">
+      <div className="teamMember__details">
+        <p className="text-capitalize">{usr.userName}</p>
+        <span>
+          {usr.isOnline
+            ? onlineNotification()
+            : offlineNotification()}
+        </span>
+      </div>
+    </div>
+  );
+};
+
+TeamMemberDetail.propTypes = {
+  usr: PropTypes.object.isRequired,
+};
+
+const offlineNotification = () => {
+  return (
+    <Tooltip title="offline" placement="right-start">
+      <NotInterestedIcon className="teamMember__offline" />
+    </Tooltip>
+  );
+};
+
+const onlineNotification = () => {
+  return (
+    <Tooltip title="connected" placement="right-start">
+      <ImportantDevicesIcon className="teamMember__online" />
+    </Tooltip>
+  );
+};
 
 export default function TeamMember({ team }) {
   const [users, setUsers] = useState([]);
@@ -25,7 +62,7 @@ export default function TeamMember({ team }) {
             tmp.push(doc);
           });
 
-        if ((!users && tmp) || !ArrayObjectEquals(users, tmp)) {
+        if ((!users && tmp) || !arrayObjectEquals(users, tmp)) {
           console.log(users, '=>', tmp);
           setUsers(tmp);
         }
@@ -52,63 +89,6 @@ export default function TeamMember({ team }) {
   );
 }
 
-const TeamMemberDetail = ({ usr }) => {
-  return (
-    <div className="teamMember">
-      <div className="teamMember__details">
-        <p>{usr.userName.toUpperCase()}</p>
-        <span>
-          {usr.isOnline
-            ? onlineNotification()
-            : offlineNotification()}
-        </span>
-      </div>
-    </div>
-  );
-};
-
-const offlineNotification = () => {
-  return (
-    <Tooltip title="offline" placement="right-start">
-      <NotInterestedIcon className="teamMember__offline" />
-    </Tooltip>
-  );
-};
-
-const onlineNotification = () => {
-  return (
-    <Tooltip title="connected" placement="right-start">
-      <ImportantDevicesIcon className="teamMember__online" />
-    </Tooltip>
-  );
-};
-
-const ArrayObjectEquals = (oldArr, newArr) => {
-  if (oldArr.length !== newArr.length) {
-    return false;
-  }
-
-  let result = true;
-
-  oldArr.forEach((o) => {
-    newArr.forEach((n) => {
-      let rv = true;
-      if (o.userName === n.userName) {
-        rv = rv && n['isOnline'] === o['isOnline'];
-        if (!rv) {
-          console.log(
-            'isOnline',
-            ' ',
-            n['isOnline'],
-            ' ',
-            o['isOnline'],
-          );
-        }
-      }
-
-      result = result && rv;
-    });
-  });
-
-  return result;
+TeamMember.propTypes = {
+  team: PropTypes.string.isRequired,
 };

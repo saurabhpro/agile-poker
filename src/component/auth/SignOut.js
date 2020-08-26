@@ -2,43 +2,22 @@ import sessionStoreUserName, {
   sessionStoreClearUserName,
 } from '../utils/sessionStore';
 
-import database from '../Firebase';
+import { unsetUser } from '../utils/firebaseDb';
 
 export default function signOut() {
   const userName = sessionStoreUserName();
+  logout(userName);
   sessionStoreClearUserName();
-
-  unsetUser(userName);
 }
 
-/**
- * aysnc method to mark the currently active user offline
- * @param {*} user the username or primary key of firebase document
- */
-async function unsetUser(user) {
-  const userRef = database.collection('users').doc(user);
-
-  try {
-    // try printing the user data
-    // const doc = await userRef.get();
-    // if (!doc.exists) {
-    //   console.log('No such document!');
-    // } else {
-    //   console.log('Document data:', doc.data());
-    // }
-
-    const res = await userRef.set(
-      {
-        isOnline: false,
-      },
-      { merge: true },
-    );
-
-    console.log('Set: ', res);
-
-    // allow refreshing the page - and since our update was sucessful - we wil see home page
-    window.location.href = `${process.env.PUBLIC_URL}/`;
-  } catch (e) {
-    console.error(e);
-  }
-}
+const logout = (userName) => {
+  unsetUser(userName)
+    .then(() => {
+      console.log('logging out');
+      // allow refreshing the page - and since our update was sucessfull - we will see home page
+      window.location.href = `${process.env.PUBLIC_URL}/`;
+    })
+    .catch((e) => {
+      console.error(e);
+    });
+};
