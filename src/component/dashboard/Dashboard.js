@@ -4,7 +4,7 @@ import sessionStoreUserName from '../utils/sessionStore';
 import SignIn from '../auth/SignIn';
 
 export default function Dashboard(props) {
-  console.log(props?.match?.params?.team);
+  //console.log(props?.match?.params?.team);
 
   const teamName = props?.match?.params?.team;
   const userName = sessionStoreUserName();
