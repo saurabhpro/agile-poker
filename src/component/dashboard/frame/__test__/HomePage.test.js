@@ -6,12 +6,11 @@ let component;
 
 describe('main center page after successful login', () => {
   beforeAll(() => {
-    component = shallow(<HomePage userName={'Saurabh'} />);
+    component = shallow(<HomePage userName={'SAURABH'} />);
     console.debug(component.debug());
   });
 
-  it('matches the rendered snapshot', ()
-   => {
+  it('matches the rendered snapshot', () => {
     expect(component).toMatchSnapshot();
   });
 

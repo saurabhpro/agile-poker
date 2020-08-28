@@ -11,6 +11,7 @@ const Result = ({ currentUser }) => {
   const [resultMap, setResultMap] = React.useState(new Map());
 
   React.useEffect(() => {
+
     const voteRef = database
       .collection('result')
       .doc(currentUser.team);
@@ -21,8 +22,8 @@ const Result = ({ currentUser }) => {
       (doc) => {
         console.log(`Received query snapshot of ${doc.data()}`);
 
-        if (!doc.data().members) {
-          window.location.href = `${process.env.PUBLIC_URL}/`;
+        if (!doc.data()?.members) {
+          window.location.href = `${process.env.PUBLIC_URL}/${currentUser.team}`;
         }
 
         doc.data().members.forEach((m) => {

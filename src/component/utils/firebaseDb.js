@@ -94,6 +94,17 @@ async function unsetUser(user) {
   );
 }
 
+async function setUserToOnline(user) {
+  const userRef = database.collection('users').doc(user);
+
+  return await userRef.set(
+    {
+      isOnline: true,
+    },
+    { merge: true },
+  );
+}
+
 export {
   getCurrentlyLoggedInUserDetails,
   removeTasksOfTeam,
@@ -101,4 +112,5 @@ export {
   getTaskIdForTeam,
   createEmptyTaskForTeam,
   unsetUser,
+  setUserToOnline
 };

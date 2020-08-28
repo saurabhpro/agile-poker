@@ -21,7 +21,7 @@ const TaskIdManager = ({ team, role, setShowReset }) => {
       .collection('result')
       .doc(team)
       .onSnapshot((doc) => {
-        if (doc.data().taskId) {
+        if (doc.data() && doc.data().taskId) {
           setTaskId(doc.data().taskId.toUpperCase());
           setTaskInputDisabled(true);
           setShowReset(true);

@@ -73,7 +73,6 @@ const Header = () => {
         <Toolbar className={classes.toolbar}>
           <Typography
             variant="h6"
-            color="light"
             noWrap
             className={classes.toolbarTitle}
           >

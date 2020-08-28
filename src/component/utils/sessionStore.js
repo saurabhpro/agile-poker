@@ -14,6 +14,9 @@ export const sessionStoreClearUserName = () =>
  * @param {*} userName sets this user name into the session store
  */
 export const addUserNameToSessionStore = (userName) =>
-  sessionStorage.setItem('agilePokerUserName', userName);
+  sessionStorage.setItem(
+    'agilePokerUserName',
+    userName.toUpperCase(),
+  );
 
 export default sessionStoreUserName;

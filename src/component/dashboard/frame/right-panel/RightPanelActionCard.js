@@ -25,9 +25,7 @@ const RightPanelActionCard = ({ currentUser, style }) => {
       <Card.Body>
         <Card.Title className="title">Poker</Card.Title>
 
-        <Card.Text className="text">
-          {currentUser.userName.toUpperCase()}
-        </Card.Text>
+        <Card.Text className="text">{currentUser.userName}</Card.Text>
 
         <p className="text">
           {currentUser.role

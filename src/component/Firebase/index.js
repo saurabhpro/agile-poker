@@ -3,8 +3,8 @@ For a well-encapsulated Firebase module, we'll define a index.js file in our Fir
 */
 
 import FirebaseContext from './context';
-import { auth, database } from './Firebase';
+import { auth, database , currentTimeStamp} from './Firebase';
 
 export default database;
 
-export { auth, FirebaseContext };
+export { auth, currentTimeStamp, FirebaseContext };

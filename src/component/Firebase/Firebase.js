@@ -11,3 +11,4 @@ import config from './config';
 firebase.initializeApp(config);
 export const auth = firebase.auth;
 export const database = firebase.firestore();
+export const currentTimeStamp = firebase.firestore.FieldValue.serverTimestamp();

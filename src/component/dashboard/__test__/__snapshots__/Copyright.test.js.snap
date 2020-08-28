@@ -9,7 +9,7 @@ exports[`copyright message matches the rendered snapshot 1`] = `
   Copyright © 
   <WithStyles(ForwardRef(Link))
     color="inherit"
-    href="https://github.com/saurabhpro/"
+    href="https://github.com/"
   >
     Saurabh
   </WithStyles(ForwardRef(Link))>

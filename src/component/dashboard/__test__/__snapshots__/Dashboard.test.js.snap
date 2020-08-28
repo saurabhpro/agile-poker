@@ -3,7 +3,7 @@
 exports[` dashboard with authentication renders correctly 1`] = `
 <div>
   <HomePage
-    userName="Saurabh"
+    userName="SAURABH"
   />
 </div>
 `;

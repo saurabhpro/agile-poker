@@ -5,16 +5,22 @@ import { Row } from 'react-bootstrap';
 
 import CardPanel from './CardPanel';
 import RightSidePanel from './RightSidePanel';
-import { getCurrentlyLoggedInUserDetails } from '../../utils/firebaseDb';
+import {
+  getCurrentlyLoggedInUserDetails,
+  setUserToOnline,
+} from '../../utils/firebaseDb';
 
 const HomePage = ({ userName }) => {
   const [currentUser, setCurrentUser] = React.useState();
 
   React.useEffect(() => {
     const getCurrentUser = () => {
-      getCurrentlyLoggedInUserDetails(userName).then((usr) =>
-        setCurrentUser(usr),
-      );
+      getCurrentlyLoggedInUserDetails(userName).then((usr) => {
+        setCurrentUser(usr);
+        if (!usr.isOnline) {
+          setUserToOnline(userName);
+        }
+      });
     };
 
     if (!currentUser) {

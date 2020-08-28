@@ -7,7 +7,7 @@ import {
 test('should store session store user name', () => {
   addUserNameToSessionStore('Saurabh');
 
-  expect(sessionStoreUserName()).toBe('Saurabh');
+  expect(sessionStoreUserName()).toBe('SAURABH');
 });
 
 test('should clear session store user name', () => {

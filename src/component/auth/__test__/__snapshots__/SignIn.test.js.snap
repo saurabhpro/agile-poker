@@ -141,11 +141,328 @@ exports[`should render properly 1`] = `
             onSubmit={[Function]}
           >
             <WithStyles(ForwardRef(TextField))
+              autoFocus={true}
+              fullWidth={true}
+              id="team"
+              label="Team"
+              margin="normal"
+              name="team"
+              onChange={[Function]}
+              required={true}
+              variant="outlined"
+            >
+              <ForwardRef(TextField)
+                autoFocus={true}
+                classes={
+                  Object {
+                    "root": "MuiTextField-root",
+                  }
+                }
+                fullWidth={true}
+                id="team"
+                label="Team"
+                margin="normal"
+                name="team"
+                onChange={[Function]}
+                required={true}
+                variant="outlined"
+              >
+                <WithStyles(ForwardRef(FormControl))
+                  className="MuiTextField-root"
+                  color="primary"
+                  disabled={false}
+                  error={false}
+                  fullWidth={true}
+                  margin="normal"
+                  required={true}
+                  variant="outlined"
+                >
+                  <ForwardRef(FormControl)
+                    className="MuiTextField-root"
+                    classes={
+                      Object {
+                        "fullWidth": "MuiFormControl-fullWidth",
+                        "marginDense": "MuiFormControl-marginDense",
+                        "marginNormal": "MuiFormControl-marginNormal",
+                        "root": "MuiFormControl-root",
+                      }
+                    }
+                    color="primary"
+                    disabled={false}
+                    error={false}
+                    fullWidth={true}
+                    margin="normal"
+                    required={true}
+                    variant="outlined"
+                  >
+                    <div
+                      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <WithStyles(ForwardRef(InputLabel))
+                        htmlFor="team"
+                        id="team-label"
+                      >
+                        <ForwardRef(InputLabel)
+                          classes={
+                            Object {
+                              "animated": "MuiInputLabel-animated",
+                              "asterisk": "MuiInputLabel-asterisk",
+                              "disabled": "Mui-disabled",
+                              "error": "Mui-error",
+                              "filled": "MuiInputLabel-filled",
+                              "focused": "Mui-focused",
+                              "formControl": "MuiInputLabel-formControl",
+                              "marginDense": "MuiInputLabel-marginDense",
+                              "outlined": "MuiInputLabel-outlined",
+                              "required": "Mui-required",
+                              "root": "MuiInputLabel-root",
+                              "shrink": "MuiInputLabel-shrink",
+                            }
+                          }
+                          htmlFor="team"
+                          id="team-label"
+                        >
+                          <WithStyles(ForwardRef(FormLabel))
+                            className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                            classes={
+                              Object {
+                                "asterisk": "MuiInputLabel-asterisk",
+                                "disabled": "Mui-disabled",
+                                "error": "Mui-error",
+                                "focused": "Mui-focused",
+                                "required": "Mui-required",
+                              }
+                            }
+                            data-shrink={false}
+                            htmlFor="team"
+                            id="team-label"
+                          >
+                            <ForwardRef(FormLabel)
+                              className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                              classes={
+                                Object {
+                                  "asterisk": "MuiFormLabel-asterisk MuiInputLabel-asterisk",
+                                  "colorSecondary": "MuiFormLabel-colorSecondary",
+                                  "disabled": "Mui-disabled Mui-disabled",
+                                  "error": "Mui-error Mui-error",
+                                  "filled": "MuiFormLabel-filled",
+                                  "focused": "Mui-focused Mui-focused",
+                                  "required": "Mui-required Mui-required",
+                                  "root": "MuiFormLabel-root",
+                                }
+                              }
+                              data-shrink={false}
+                              htmlFor="team"
+                              id="team-label"
+                            >
+                              <label
+                                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
+                                data-shrink={false}
+                                htmlFor="team"
+                                id="team-label"
+                              >
+                                Team
+                                <span
+                                  aria-hidden={true}
+                                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                                >
+                                   
+                                  *
+                                </span>
+                              </label>
+                            </ForwardRef(FormLabel)>
+                          </WithStyles(ForwardRef(FormLabel))>
+                        </ForwardRef(InputLabel)>
+                      </WithStyles(ForwardRef(InputLabel))>
+                      <WithStyles(ForwardRef(OutlinedInput))
+                        autoFocus={true}
+                        fullWidth={true}
+                        id="team"
+                        label={
+                          <React.Fragment>
+                            Team
+                             *
+                          </React.Fragment>
+                        }
+                        multiline={false}
+                        name="team"
+                        onChange={[Function]}
+                      >
+                        <ForwardRef(OutlinedInput)
+                          autoFocus={true}
+                          classes={
+                            Object {
+                              "adornedEnd": "MuiOutlinedInput-adornedEnd",
+                              "adornedStart": "MuiOutlinedInput-adornedStart",
+                              "colorSecondary": "MuiOutlinedInput-colorSecondary",
+                              "disabled": "Mui-disabled",
+                              "error": "Mui-error",
+                              "focused": "Mui-focused",
+                              "input": "MuiOutlinedInput-input",
+                              "inputAdornedEnd": "MuiOutlinedInput-inputAdornedEnd",
+                              "inputAdornedStart": "MuiOutlinedInput-inputAdornedStart",
+                              "inputMarginDense": "MuiOutlinedInput-inputMarginDense",
+                              "inputMultiline": "MuiOutlinedInput-inputMultiline",
+                              "marginDense": "MuiOutlinedInput-marginDense",
+                              "multiline": "MuiOutlinedInput-multiline",
+                              "notchedOutline": "MuiOutlinedInput-notchedOutline",
+                              "root": "MuiOutlinedInput-root",
+                            }
+                          }
+                          fullWidth={true}
+                          id="team"
+                          label={
+                            <React.Fragment>
+                              Team
+                               *
+                            </React.Fragment>
+                          }
+                          multiline={false}
+                          name="team"
+                          onChange={[Function]}
+                        >
+                          <WithStyles(ForwardRef(InputBase))
+                            autoFocus={true}
+                            classes={
+                              Object {
+                                "adornedEnd": "MuiOutlinedInput-adornedEnd",
+                                "adornedStart": "MuiOutlinedInput-adornedStart",
+                                "colorSecondary": "MuiOutlinedInput-colorSecondary",
+                                "disabled": "Mui-disabled",
+                                "error": "Mui-error",
+                                "focused": "Mui-focused",
+                                "input": "MuiOutlinedInput-input",
+                                "inputAdornedEnd": "MuiOutlinedInput-inputAdornedEnd",
+                                "inputAdornedStart": "MuiOutlinedInput-inputAdornedStart",
+                                "inputMarginDense": "MuiOutlinedInput-inputMarginDense",
+                                "inputMultiline": "MuiOutlinedInput-inputMultiline",
+                                "marginDense": "MuiOutlinedInput-marginDense",
+                                "multiline": "MuiOutlinedInput-multiline",
+                                "notchedOutline": null,
+                                "root": "MuiOutlinedInput-root",
+                              }
+                            }
+                            fullWidth={true}
+                            id="team"
+                            inputComponent="input"
+                            multiline={false}
+                            name="team"
+                            onChange={[Function]}
+                            renderSuffix={[Function]}
+                            type="text"
+                          >
+                            <ForwardRef(InputBase)
+                              autoFocus={true}
+                              classes={
+                                Object {
+                                  "adornedEnd": "MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd",
+                                  "adornedStart": "MuiInputBase-adornedStart MuiOutlinedInput-adornedStart",
+                                  "colorSecondary": "MuiInputBase-colorSecondary MuiOutlinedInput-colorSecondary",
+                                  "disabled": "Mui-disabled Mui-disabled",
+                                  "error": "Mui-error Mui-error",
+                                  "focused": "Mui-focused Mui-focused",
+                                  "formControl": "MuiInputBase-formControl",
+                                  "fullWidth": "MuiInputBase-fullWidth",
+                                  "input": "MuiInputBase-input MuiOutlinedInput-input",
+                                  "inputAdornedEnd": "MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd",
+                                  "inputAdornedStart": "MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart",
+                                  "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
+                                  "inputMarginDense": "MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense",
+                                  "inputMultiline": "MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline",
+                                  "inputTypeSearch": "MuiInputBase-inputTypeSearch",
+                                  "marginDense": "MuiInputBase-marginDense MuiOutlinedInput-marginDense",
+                                  "multiline": "MuiInputBase-multiline MuiOutlinedInput-multiline",
+                                  "root": "MuiInputBase-root MuiOutlinedInput-root",
+                                }
+                              }
+                              fullWidth={true}
+                              id="team"
+                              inputComponent="input"
+                              multiline={false}
+                              name="team"
+                              onChange={[Function]}
+                              renderSuffix={[Function]}
+                              type="text"
+                            >
+                              <div
+                                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                                onClick={[Function]}
+                              >
+                                <input
+                                  aria-invalid={false}
+                                  autoFocus={true}
+                                  className="MuiInputBase-input MuiOutlinedInput-input"
+                                  disabled={false}
+                                  id="team"
+                                  name="team"
+                                  onAnimationStart={[Function]}
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onFocus={[Function]}
+                                  required={true}
+                                  type="text"
+                                />
+                                <WithStyles(ForwardRef(NotchedOutline))
+                                  className="MuiOutlinedInput-notchedOutline"
+                                  label={
+                                    <React.Fragment>
+                                      Team
+                                       *
+                                    </React.Fragment>
+                                  }
+                                  labelWidth={0}
+                                  notched={false}
+                                >
+                                  <ForwardRef(NotchedOutline)
+                                    className="MuiOutlinedInput-notchedOutline"
+                                    classes={
+                                      Object {
+                                        "legend": "PrivateNotchedOutline-legend-6",
+                                        "legendLabelled": "PrivateNotchedOutline-legendLabelled-7",
+                                        "legendNotched": "PrivateNotchedOutline-legendNotched-8",
+                                        "root": "PrivateNotchedOutline-root-5",
+                                      }
+                                    }
+                                    label={
+                                      <React.Fragment>
+                                        Team
+                                         *
+                                      </React.Fragment>
+                                    }
+                                    labelWidth={0}
+                                    notched={false}
+                                  >
+                                    <fieldset
+                                      aria-hidden={true}
+                                      className="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+                                    >
+                                      <legend
+                                        className="PrivateNotchedOutline-legendLabelled-7"
+                                      >
+                                        <span>
+                                          Team
+                                           *
+                                        </span>
+                                      </legend>
+                                    </fieldset>
+                                  </ForwardRef(NotchedOutline)>
+                                </WithStyles(ForwardRef(NotchedOutline))>
+                              </div>
+                            </ForwardRef(InputBase)>
+                          </WithStyles(ForwardRef(InputBase))>
+                        </ForwardRef(OutlinedInput)>
+                      </WithStyles(ForwardRef(OutlinedInput))>
+                    </div>
+                  </ForwardRef(FormControl)>
+                </WithStyles(ForwardRef(FormControl))>
+              </ForwardRef(TextField)>
+            </WithStyles(ForwardRef(TextField))>
+            <WithStyles(ForwardRef(TextField))
               autoComplete="email"
               autoFocus={true}
               fullWidth={true}
               id="email"
-              label="Email Address"
+              label="User Name"
               margin="normal"
               name="userName"
               onChange={[Function]}
@@ -162,7 +479,7 @@ exports[`should render properly 1`] = `
                 }
                 fullWidth={true}
                 id="email"
-                label="Email Address"
+                label="User Name"
                 margin="normal"
                 name="userName"
                 onChange={[Function]}
@@ -263,7 +580,7 @@ exports[`should render properly 1`] = `
                                 htmlFor="email"
                                 id="email-label"
                               >
-                                Email Address
+                                User Name
                                 <span
                                   aria-hidden={true}
                                   className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
@@ -283,7 +600,7 @@ exports[`should render properly 1`] = `
                         id="email"
                         label={
                           <React.Fragment>
-                            Email Address
+                            User Name
                              *
                           </React.Fragment>
                         }
@@ -317,7 +634,7 @@ exports[`should render properly 1`] = `
                           id="email"
                           label={
                             <React.Fragment>
-                              Email Address
+                              User Name
                                *
                             </React.Fragment>
                           }
@@ -413,7 +730,7 @@ exports[`should render properly 1`] = `
                                   className="MuiOutlinedInput-notchedOutline"
                                   label={
                                     <React.Fragment>
-                                      Email Address
+                                      User Name
                                        *
                                     </React.Fragment>
                                   }
@@ -432,7 +749,7 @@ exports[`should render properly 1`] = `
                                     }
                                     label={
                                       <React.Fragment>
-                                        Email Address
+                                        User Name
                                          *
                                       </React.Fragment>
                                     }
@@ -447,7 +764,7 @@ exports[`should render properly 1`] = `
                                         className="PrivateNotchedOutline-legendLabelled-7"
                                       >
                                         <span>
-                                          Email Address
+                                          User Name
                                            *
                                         </span>
                                       </legend>
@@ -464,6 +781,858 @@ exports[`should render properly 1`] = `
                 </WithStyles(ForwardRef(FormControl))>
               </ForwardRef(TextField)>
             </WithStyles(ForwardRef(TextField))>
+            <WithStyles(ForwardRef(FormControl))
+              fullWidth={true}
+            >
+              <ForwardRef(FormControl)
+                classes={
+                  Object {
+                    "fullWidth": "MuiFormControl-fullWidth",
+                    "marginDense": "MuiFormControl-marginDense",
+                    "marginNormal": "MuiFormControl-marginNormal",
+                    "root": "MuiFormControl-root",
+                  }
+                }
+                fullWidth={true}
+              >
+                <div
+                  className="MuiFormControl-root MuiFormControl-fullWidth"
+                >
+                  <WithStyles(ForwardRef(Select))
+                    defaultValue="Team Member"
+                    inputProps={
+                      Object {
+                        "aria-label": "Without label",
+                      }
+                    }
+                    onChange={[Function]}
+                    value="Team Member"
+                    variant="outlined"
+                  >
+                    <ForwardRef(Select)
+                      classes={
+                        Object {
+                          "disabled": "Mui-disabled",
+                          "filled": "MuiSelect-filled",
+                          "icon": "MuiSelect-icon",
+                          "iconFilled": "MuiSelect-iconFilled",
+                          "iconOpen": "MuiSelect-iconOpen",
+                          "iconOutlined": "MuiSelect-iconOutlined",
+                          "nativeInput": "MuiSelect-nativeInput",
+                          "outlined": "MuiSelect-outlined",
+                          "root": "MuiSelect-root",
+                          "select": "MuiSelect-select",
+                          "selectMenu": "MuiSelect-selectMenu",
+                        }
+                      }
+                      defaultValue="Team Member"
+                      inputProps={
+                        Object {
+                          "aria-label": "Without label",
+                        }
+                      }
+                      onChange={[Function]}
+                      value="Team Member"
+                      variant="outlined"
+                    >
+                      <WithStyles(ForwardRef(OutlinedInput))
+                        defaultValue="Team Member"
+                        inputComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "propTypes": Object {
+                              "IconComponent": [Function],
+                              "MenuProps": [Function],
+                              "SelectDisplayProps": [Function],
+                              "aria-label": [Function],
+                              "autoFocus": [Function],
+                              "autoWidth": [Function],
+                              "children": [Function],
+                              "className": [Function],
+                              "classes": [Function],
+                              "defaultValue": [Function],
+                              "disabled": [Function],
+                              "displayEmpty": [Function],
+                              "inputRef": [Function],
+                              "labelId": [Function],
+                              "multiple": [Function],
+                              "name": [Function],
+                              "onBlur": [Function],
+                              "onChange": [Function],
+                              "onClose": [Function],
+                              "onFocus": [Function],
+                              "onOpen": [Function],
+                              "open": [Function],
+                              "readOnly": [Function],
+                              "renderValue": [Function],
+                              "tabIndex": [Function],
+                              "type": [Function],
+                              "value": [Function],
+                              "variant": [Function],
+                            },
+                            "render": [Function],
+                          }
+                        }
+                        inputProps={
+                          Object {
+                            "IconComponent": Object {
+                              "$$typeof": Symbol(react.memo),
+                              "compare": null,
+                              "type": Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "render": [Function],
+                              },
+                            },
+                            "MenuProps": undefined,
+                            "SelectDisplayProps": Object {
+                              "id": undefined,
+                            },
+                            "aria-label": "Without label",
+                            "autoWidth": false,
+                            "children": Array [
+                              <ForwardRef(WithStyles)
+                                value="Team Member"
+                              >
+                                Team Member
+                              </ForwardRef(WithStyles)>,
+                              <ForwardRef(WithStyles)
+                                value="Product Owner"
+                              >
+                                Product Owner
+                              </ForwardRef(WithStyles)>,
+                              <ForwardRef(WithStyles)
+                                value="Scrum Master"
+                              >
+                                Scrum Master
+                              </ForwardRef(WithStyles)>,
+                            ],
+                            "classes": Object {
+                              "disabled": "Mui-disabled",
+                              "filled": "MuiSelect-filled",
+                              "icon": "MuiSelect-icon",
+                              "iconFilled": "MuiSelect-iconFilled",
+                              "iconOpen": "MuiSelect-iconOpen",
+                              "iconOutlined": "MuiSelect-iconOutlined",
+                              "nativeInput": "MuiSelect-nativeInput",
+                              "outlined": "MuiSelect-outlined",
+                              "root": "MuiSelect-root",
+                              "select": "MuiSelect-select",
+                              "selectMenu": "MuiSelect-selectMenu",
+                            },
+                            "displayEmpty": false,
+                            "labelId": undefined,
+                            "multiple": false,
+                            "onClose": undefined,
+                            "onOpen": undefined,
+                            "open": undefined,
+                            "renderValue": undefined,
+                            "type": undefined,
+                            "variant": "outlined",
+                          }
+                        }
+                        labelWidth={0}
+                        onChange={[Function]}
+                        value="Team Member"
+                      >
+                        <ForwardRef(OutlinedInput)
+                          classes={
+                            Object {
+                              "adornedEnd": "MuiOutlinedInput-adornedEnd",
+                              "adornedStart": "MuiOutlinedInput-adornedStart",
+                              "colorSecondary": "MuiOutlinedInput-colorSecondary",
+                              "disabled": "Mui-disabled",
+                              "error": "Mui-error",
+                              "focused": "Mui-focused",
+                              "input": "MuiOutlinedInput-input",
+                              "inputAdornedEnd": "MuiOutlinedInput-inputAdornedEnd",
+                              "inputAdornedStart": "MuiOutlinedInput-inputAdornedStart",
+                              "inputMarginDense": "MuiOutlinedInput-inputMarginDense",
+                              "inputMultiline": "MuiOutlinedInput-inputMultiline",
+                              "marginDense": "MuiOutlinedInput-marginDense",
+                              "multiline": "MuiOutlinedInput-multiline",
+                              "notchedOutline": "MuiOutlinedInput-notchedOutline",
+                              "root": "MuiOutlinedInput-root",
+                            }
+                          }
+                          defaultValue="Team Member"
+                          inputComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "propTypes": Object {
+                                "IconComponent": [Function],
+                                "MenuProps": [Function],
+                                "SelectDisplayProps": [Function],
+                                "aria-label": [Function],
+                                "autoFocus": [Function],
+                                "autoWidth": [Function],
+                                "children": [Function],
+                                "className": [Function],
+                                "classes": [Function],
+                                "defaultValue": [Function],
+                                "disabled": [Function],
+                                "displayEmpty": [Function],
+                                "inputRef": [Function],
+                                "labelId": [Function],
+                                "multiple": [Function],
+                                "name": [Function],
+                                "onBlur": [Function],
+                                "onChange": [Function],
+                                "onClose": [Function],
+                                "onFocus": [Function],
+                                "onOpen": [Function],
+                                "open": [Function],
+                                "readOnly": [Function],
+                                "renderValue": [Function],
+                                "tabIndex": [Function],
+                                "type": [Function],
+                                "value": [Function],
+                                "variant": [Function],
+                              },
+                              "render": [Function],
+                            }
+                          }
+                          inputProps={
+                            Object {
+                              "IconComponent": Object {
+                                "$$typeof": Symbol(react.memo),
+                                "compare": null,
+                                "type": Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "render": [Function],
+                                },
+                              },
+                              "MenuProps": undefined,
+                              "SelectDisplayProps": Object {
+                                "id": undefined,
+                              },
+                              "aria-label": "Without label",
+                              "autoWidth": false,
+                              "children": Array [
+                                <ForwardRef(WithStyles)
+                                  value="Team Member"
+                                >
+                                  Team Member
+                                </ForwardRef(WithStyles)>,
+                                <ForwardRef(WithStyles)
+                                  value="Product Owner"
+                                >
+                                  Product Owner
+                                </ForwardRef(WithStyles)>,
+                                <ForwardRef(WithStyles)
+                                  value="Scrum Master"
+                                >
+                                  Scrum Master
+                                </ForwardRef(WithStyles)>,
+                              ],
+                              "classes": Object {
+                                "disabled": "Mui-disabled",
+                                "filled": "MuiSelect-filled",
+                                "icon": "MuiSelect-icon",
+                                "iconFilled": "MuiSelect-iconFilled",
+                                "iconOpen": "MuiSelect-iconOpen",
+                                "iconOutlined": "MuiSelect-iconOutlined",
+                                "nativeInput": "MuiSelect-nativeInput",
+                                "outlined": "MuiSelect-outlined",
+                                "root": "MuiSelect-root",
+                                "select": "MuiSelect-select",
+                                "selectMenu": "MuiSelect-selectMenu",
+                              },
+                              "displayEmpty": false,
+                              "labelId": undefined,
+                              "multiple": false,
+                              "onClose": undefined,
+                              "onOpen": undefined,
+                              "open": undefined,
+                              "renderValue": undefined,
+                              "type": undefined,
+                              "variant": "outlined",
+                            }
+                          }
+                          labelWidth={0}
+                          onChange={[Function]}
+                          value="Team Member"
+                        >
+                          <WithStyles(ForwardRef(InputBase))
+                            classes={
+                              Object {
+                                "adornedEnd": "MuiOutlinedInput-adornedEnd",
+                                "adornedStart": "MuiOutlinedInput-adornedStart",
+                                "colorSecondary": "MuiOutlinedInput-colorSecondary",
+                                "disabled": "Mui-disabled",
+                                "error": "Mui-error",
+                                "focused": "Mui-focused",
+                                "input": "MuiOutlinedInput-input",
+                                "inputAdornedEnd": "MuiOutlinedInput-inputAdornedEnd",
+                                "inputAdornedStart": "MuiOutlinedInput-inputAdornedStart",
+                                "inputMarginDense": "MuiOutlinedInput-inputMarginDense",
+                                "inputMultiline": "MuiOutlinedInput-inputMultiline",
+                                "marginDense": "MuiOutlinedInput-marginDense",
+                                "multiline": "MuiOutlinedInput-multiline",
+                                "notchedOutline": null,
+                                "root": "MuiOutlinedInput-root",
+                              }
+                            }
+                            defaultValue="Team Member"
+                            fullWidth={false}
+                            inputComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "propTypes": Object {
+                                  "IconComponent": [Function],
+                                  "MenuProps": [Function],
+                                  "SelectDisplayProps": [Function],
+                                  "aria-label": [Function],
+                                  "autoFocus": [Function],
+                                  "autoWidth": [Function],
+                                  "children": [Function],
+                                  "className": [Function],
+                                  "classes": [Function],
+                                  "defaultValue": [Function],
+                                  "disabled": [Function],
+                                  "displayEmpty": [Function],
+                                  "inputRef": [Function],
+                                  "labelId": [Function],
+                                  "multiple": [Function],
+                                  "name": [Function],
+                                  "onBlur": [Function],
+                                  "onChange": [Function],
+                                  "onClose": [Function],
+                                  "onFocus": [Function],
+                                  "onOpen": [Function],
+                                  "open": [Function],
+                                  "readOnly": [Function],
+                                  "renderValue": [Function],
+                                  "tabIndex": [Function],
+                                  "type": [Function],
+                                  "value": [Function],
+                                  "variant": [Function],
+                                },
+                                "render": [Function],
+                              }
+                            }
+                            inputProps={
+                              Object {
+                                "IconComponent": Object {
+                                  "$$typeof": Symbol(react.memo),
+                                  "compare": null,
+                                  "type": Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "render": [Function],
+                                  },
+                                },
+                                "MenuProps": undefined,
+                                "SelectDisplayProps": Object {
+                                  "id": undefined,
+                                },
+                                "aria-label": "Without label",
+                                "autoWidth": false,
+                                "children": Array [
+                                  <ForwardRef(WithStyles)
+                                    value="Team Member"
+                                  >
+                                    Team Member
+                                  </ForwardRef(WithStyles)>,
+                                  <ForwardRef(WithStyles)
+                                    value="Product Owner"
+                                  >
+                                    Product Owner
+                                  </ForwardRef(WithStyles)>,
+                                  <ForwardRef(WithStyles)
+                                    value="Scrum Master"
+                                  >
+                                    Scrum Master
+                                  </ForwardRef(WithStyles)>,
+                                ],
+                                "classes": Object {
+                                  "disabled": "Mui-disabled",
+                                  "filled": "MuiSelect-filled",
+                                  "icon": "MuiSelect-icon",
+                                  "iconFilled": "MuiSelect-iconFilled",
+                                  "iconOpen": "MuiSelect-iconOpen",
+                                  "iconOutlined": "MuiSelect-iconOutlined",
+                                  "nativeInput": "MuiSelect-nativeInput",
+                                  "outlined": "MuiSelect-outlined",
+                                  "root": "MuiSelect-root",
+                                  "select": "MuiSelect-select",
+                                  "selectMenu": "MuiSelect-selectMenu",
+                                },
+                                "displayEmpty": false,
+                                "labelId": undefined,
+                                "multiple": false,
+                                "onClose": undefined,
+                                "onOpen": undefined,
+                                "open": undefined,
+                                "renderValue": undefined,
+                                "type": undefined,
+                                "variant": "outlined",
+                              }
+                            }
+                            multiline={false}
+                            onChange={[Function]}
+                            renderSuffix={[Function]}
+                            type="text"
+                            value="Team Member"
+                          >
+                            <ForwardRef(InputBase)
+                              classes={
+                                Object {
+                                  "adornedEnd": "MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd",
+                                  "adornedStart": "MuiInputBase-adornedStart MuiOutlinedInput-adornedStart",
+                                  "colorSecondary": "MuiInputBase-colorSecondary MuiOutlinedInput-colorSecondary",
+                                  "disabled": "Mui-disabled Mui-disabled",
+                                  "error": "Mui-error Mui-error",
+                                  "focused": "Mui-focused Mui-focused",
+                                  "formControl": "MuiInputBase-formControl",
+                                  "fullWidth": "MuiInputBase-fullWidth",
+                                  "input": "MuiInputBase-input MuiOutlinedInput-input",
+                                  "inputAdornedEnd": "MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd",
+                                  "inputAdornedStart": "MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart",
+                                  "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
+                                  "inputMarginDense": "MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense",
+                                  "inputMultiline": "MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline",
+                                  "inputTypeSearch": "MuiInputBase-inputTypeSearch",
+                                  "marginDense": "MuiInputBase-marginDense MuiOutlinedInput-marginDense",
+                                  "multiline": "MuiInputBase-multiline MuiOutlinedInput-multiline",
+                                  "root": "MuiInputBase-root MuiOutlinedInput-root",
+                                }
+                              }
+                              defaultValue="Team Member"
+                              fullWidth={false}
+                              inputComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "propTypes": Object {
+                                    "IconComponent": [Function],
+                                    "MenuProps": [Function],
+                                    "SelectDisplayProps": [Function],
+                                    "aria-label": [Function],
+                                    "autoFocus": [Function],
+                                    "autoWidth": [Function],
+                                    "children": [Function],
+                                    "className": [Function],
+                                    "classes": [Function],
+                                    "defaultValue": [Function],
+                                    "disabled": [Function],
+                                    "displayEmpty": [Function],
+                                    "inputRef": [Function],
+                                    "labelId": [Function],
+                                    "multiple": [Function],
+                                    "name": [Function],
+                                    "onBlur": [Function],
+                                    "onChange": [Function],
+                                    "onClose": [Function],
+                                    "onFocus": [Function],
+                                    "onOpen": [Function],
+                                    "open": [Function],
+                                    "readOnly": [Function],
+                                    "renderValue": [Function],
+                                    "tabIndex": [Function],
+                                    "type": [Function],
+                                    "value": [Function],
+                                    "variant": [Function],
+                                  },
+                                  "render": [Function],
+                                }
+                              }
+                              inputProps={
+                                Object {
+                                  "IconComponent": Object {
+                                    "$$typeof": Symbol(react.memo),
+                                    "compare": null,
+                                    "type": Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "render": [Function],
+                                    },
+                                  },
+                                  "MenuProps": undefined,
+                                  "SelectDisplayProps": Object {
+                                    "id": undefined,
+                                  },
+                                  "aria-label": "Without label",
+                                  "autoWidth": false,
+                                  "children": Array [
+                                    <ForwardRef(WithStyles)
+                                      value="Team Member"
+                                    >
+                                      Team Member
+                                    </ForwardRef(WithStyles)>,
+                                    <ForwardRef(WithStyles)
+                                      value="Product Owner"
+                                    >
+                                      Product Owner
+                                    </ForwardRef(WithStyles)>,
+                                    <ForwardRef(WithStyles)
+                                      value="Scrum Master"
+                                    >
+                                      Scrum Master
+                                    </ForwardRef(WithStyles)>,
+                                  ],
+                                  "classes": Object {
+                                    "disabled": "Mui-disabled",
+                                    "filled": "MuiSelect-filled",
+                                    "icon": "MuiSelect-icon",
+                                    "iconFilled": "MuiSelect-iconFilled",
+                                    "iconOpen": "MuiSelect-iconOpen",
+                                    "iconOutlined": "MuiSelect-iconOutlined",
+                                    "nativeInput": "MuiSelect-nativeInput",
+                                    "outlined": "MuiSelect-outlined",
+                                    "root": "MuiSelect-root",
+                                    "select": "MuiSelect-select",
+                                    "selectMenu": "MuiSelect-selectMenu",
+                                  },
+                                  "displayEmpty": false,
+                                  "labelId": undefined,
+                                  "multiple": false,
+                                  "onClose": undefined,
+                                  "onOpen": undefined,
+                                  "open": undefined,
+                                  "renderValue": undefined,
+                                  "type": undefined,
+                                  "variant": "outlined",
+                                }
+                              }
+                              multiline={false}
+                              onChange={[Function]}
+                              renderSuffix={[Function]}
+                              type="text"
+                              value="Team Member"
+                            >
+                              <div
+                                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+                                onClick={[Function]}
+                              >
+                                <ForwardRef(SelectInput)
+                                  IconComponent={
+                                    Object {
+                                      "$$typeof": Symbol(react.memo),
+                                      "compare": null,
+                                      "type": Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "render": [Function],
+                                      },
+                                    }
+                                  }
+                                  SelectDisplayProps={
+                                    Object {
+                                      "id": undefined,
+                                    }
+                                  }
+                                  aria-invalid={false}
+                                  aria-label="Without label"
+                                  autoWidth={false}
+                                  className="MuiInputBase-input MuiOutlinedInput-input"
+                                  classes={
+                                    Object {
+                                      "disabled": "Mui-disabled",
+                                      "filled": "MuiSelect-filled",
+                                      "icon": "MuiSelect-icon",
+                                      "iconFilled": "MuiSelect-iconFilled",
+                                      "iconOpen": "MuiSelect-iconOpen",
+                                      "iconOutlined": "MuiSelect-iconOutlined",
+                                      "nativeInput": "MuiSelect-nativeInput",
+                                      "outlined": "MuiSelect-outlined",
+                                      "root": "MuiSelect-root",
+                                      "select": "MuiSelect-select",
+                                      "selectMenu": "MuiSelect-selectMenu",
+                                    }
+                                  }
+                                  defaultValue="Team Member"
+                                  disabled={false}
+                                  displayEmpty={false}
+                                  inputRef={[Function]}
+                                  multiple={false}
+                                  onAnimationStart={[Function]}
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onFocus={[Function]}
+                                  required={false}
+                                  value="Team Member"
+                                  variant="outlined"
+                                >
+                                  <div
+                                    aria-haspopup="listbox"
+                                    aria-label="Without label"
+                                    className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                                    onBlur={[Function]}
+                                    onFocus={[Function]}
+                                    onKeyDown={[Function]}
+                                    onMouseDown={[Function]}
+                                    role="button"
+                                    tabIndex={0}
+                                  >
+                                    Team Member
+                                  </div>
+                                  <input
+                                    aria-hidden={true}
+                                    className="MuiSelect-nativeInput"
+                                    onAnimationStart={[Function]}
+                                    onChange={[Function]}
+                                    required={false}
+                                    tabIndex={-1}
+                                    value="Team Member"
+                                  />
+                                  <ForwardRef(ArrowDropDownIcon)
+                                    className="MuiSelect-icon MuiSelect-iconOutlined"
+                                  >
+                                    <WithStyles(ForwardRef(SvgIcon))
+                                      className="MuiSelect-icon MuiSelect-iconOutlined"
+                                    >
+                                      <ForwardRef(SvgIcon)
+                                        className="MuiSelect-icon MuiSelect-iconOutlined"
+                                        classes={
+                                          Object {
+                                            "colorAction": "MuiSvgIcon-colorAction",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                            "colorError": "MuiSvgIcon-colorError",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                            "root": "MuiSvgIcon-root",
+                                          }
+                                        }
+                                      >
+                                        <svg
+                                          aria-hidden={true}
+                                          className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                                          focusable="false"
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M7 10l5 5 5-5z"
+                                          />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef(ArrowDropDownIcon)>
+                                  <WithStyles(ForwardRef(Menu))
+                                    MenuListProps={
+                                      Object {
+                                        "aria-labelledby": undefined,
+                                        "disableListWrap": true,
+                                        "role": "listbox",
+                                      }
+                                    }
+                                    PaperProps={
+                                      Object {
+                                        "style": Object {
+                                          "minWidth": undefined,
+                                        },
+                                      }
+                                    }
+                                    anchorEl={
+                                      <div
+                                        aria-haspopup="listbox"
+                                        aria-label="Without label"
+                                        class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                                        role="button"
+                                        tabindex="0"
+                                      >
+                                        Team Member
+                                      </div>
+                                    }
+                                    id="menu-"
+                                    onClose={[Function]}
+                                    open={false}
+                                  >
+                                    <ForwardRef(Menu)
+                                      MenuListProps={
+                                        Object {
+                                          "aria-labelledby": undefined,
+                                          "disableListWrap": true,
+                                          "role": "listbox",
+                                        }
+                                      }
+                                      PaperProps={
+                                        Object {
+                                          "style": Object {
+                                            "minWidth": undefined,
+                                          },
+                                        }
+                                      }
+                                      anchorEl={
+                                        <div
+                                          aria-haspopup="listbox"
+                                          aria-label="Without label"
+                                          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                                          role="button"
+                                          tabindex="0"
+                                        >
+                                          Team Member
+                                        </div>
+                                      }
+                                      classes={
+                                        Object {
+                                          "list": "MuiMenu-list",
+                                          "paper": "MuiMenu-paper",
+                                        }
+                                      }
+                                      id="menu-"
+                                      onClose={[Function]}
+                                      open={false}
+                                    >
+                                      <WithStyles(ForwardRef(Popover))
+                                        PaperProps={
+                                          Object {
+                                            "classes": Object {
+                                              "root": "MuiMenu-paper",
+                                            },
+                                            "style": Object {
+                                              "minWidth": undefined,
+                                            },
+                                          }
+                                        }
+                                        anchorEl={
+                                          <div
+                                            aria-haspopup="listbox"
+                                            aria-label="Without label"
+                                            class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                                            role="button"
+                                            tabindex="0"
+                                          >
+                                            Team Member
+                                          </div>
+                                        }
+                                        anchorOrigin={
+                                          Object {
+                                            "horizontal": "left",
+                                            "vertical": "top",
+                                          }
+                                        }
+                                        getContentAnchorEl={[Function]}
+                                        id="menu-"
+                                        onClose={[Function]}
+                                        onEntering={[Function]}
+                                        open={false}
+                                        transformOrigin={
+                                          Object {
+                                            "horizontal": "left",
+                                            "vertical": "top",
+                                          }
+                                        }
+                                        transitionDuration="auto"
+                                      >
+                                        <ForwardRef(Popover)
+                                          PaperProps={
+                                            Object {
+                                              "classes": Object {
+                                                "root": "MuiMenu-paper",
+                                              },
+                                              "style": Object {
+                                                "minWidth": undefined,
+                                              },
+                                            }
+                                          }
+                                          anchorEl={
+                                            <div
+                                              aria-haspopup="listbox"
+                                              aria-label="Without label"
+                                              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                                              role="button"
+                                              tabindex="0"
+                                            >
+                                              Team Member
+                                            </div>
+                                          }
+                                          anchorOrigin={
+                                            Object {
+                                              "horizontal": "left",
+                                              "vertical": "top",
+                                            }
+                                          }
+                                          classes={
+                                            Object {
+                                              "paper": "MuiPopover-paper",
+                                              "root": "MuiPopover-root",
+                                            }
+                                          }
+                                          getContentAnchorEl={[Function]}
+                                          id="menu-"
+                                          onClose={[Function]}
+                                          onEntering={[Function]}
+                                          open={false}
+                                          transformOrigin={
+                                            Object {
+                                              "horizontal": "left",
+                                              "vertical": "top",
+                                            }
+                                          }
+                                          transitionDuration="auto"
+                                        >
+                                          <ForwardRef(Modal)
+                                            BackdropProps={
+                                              Object {
+                                                "invisible": true,
+                                              }
+                                            }
+                                            className="MuiPopover-root"
+                                            container={<body />}
+                                            id="menu-"
+                                            onClose={[Function]}
+                                            open={false}
+                                          />
+                                        </ForwardRef(Popover)>
+                                      </WithStyles(ForwardRef(Popover))>
+                                    </ForwardRef(Menu)>
+                                  </WithStyles(ForwardRef(Menu))>
+                                </ForwardRef(SelectInput)>
+                                <WithStyles(ForwardRef(NotchedOutline))
+                                  className="MuiOutlinedInput-notchedOutline"
+                                  labelWidth={0}
+                                  notched={true}
+                                >
+                                  <ForwardRef(NotchedOutline)
+                                    className="MuiOutlinedInput-notchedOutline"
+                                    classes={
+                                      Object {
+                                        "legend": "PrivateNotchedOutline-legend-6",
+                                        "legendLabelled": "PrivateNotchedOutline-legendLabelled-7",
+                                        "legendNotched": "PrivateNotchedOutline-legendNotched-8",
+                                        "root": "PrivateNotchedOutline-root-5",
+                                      }
+                                    }
+                                    labelWidth={0}
+                                    notched={true}
+                                  >
+                                    <fieldset
+                                      aria-hidden={true}
+                                      className="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+                                      style={
+                                        Object {
+                                          "paddingLeft": 8,
+                                        }
+                                      }
+                                    >
+                                      <legend
+                                        className="PrivateNotchedOutline-legend-6"
+                                        style={
+                                          Object {
+                                            "width": 0.01,
+                                          }
+                                        }
+                                      >
+                                        <span
+                                          dangerouslySetInnerHTML={
+                                            Object {
+                                              "__html": "&#8203;",
+                                            }
+                                          }
+                                        />
+                                      </legend>
+                                    </fieldset>
+                                  </ForwardRef(NotchedOutline)>
+                                </WithStyles(ForwardRef(NotchedOutline))>
+                              </div>
+                            </ForwardRef(InputBase)>
+                          </WithStyles(ForwardRef(InputBase))>
+                        </ForwardRef(OutlinedInput)>
+                      </WithStyles(ForwardRef(OutlinedInput))>
+                    </ForwardRef(Select)>
+                  </WithStyles(ForwardRef(Select))>
+                </div>
+              </ForwardRef(FormControl)>
+            </WithStyles(ForwardRef(FormControl))>
             <WithStyles(ForwardRef(Button))
               className="makeStyles-submit-4"
               color="primary"

@@ -42,7 +42,7 @@ export default function AllCardsPanel({ currentUser }) {
 
     getTaskForTeam(currentUser.team).then((task) => {
       console.log(task);
-      if (task.taskId) {
+      if (task && task.taskId) {
         // Add a new document in collection "result/team/members(map)" with ID 'userName'
         database
           .collection('result')
@@ -95,18 +95,19 @@ export default function AllCardsPanel({ currentUser }) {
 
   return (
     <div>
-      {currentUser?.role.toUpperCase() === 'PRODUCT OWNER' && (
-        <Tooltip title="Show Result">
-          <IconButton
-            color="secondary"
-            className="float-right"
-            style={{ borderColor: 'black' }}
-            onClick={() => setShowResult(true)}
-          >
-            <VisibilityIcon />
-          </IconButton>
-        </Tooltip>
-      )}
+      {!showResult &&
+        currentUser?.role.toUpperCase() === 'PRODUCT OWNER' && (
+          <Tooltip title="Show Result">
+            <IconButton
+              color="secondary"
+              className="float-right"
+              style={{ borderColor: 'black' }}
+              onClick={() => setShowResult(true)}
+            >
+              <VisibilityIcon />
+            </IconButton>
+          </Tooltip>
+        )}
 
       {!showResult ? (
         <CardDeck
