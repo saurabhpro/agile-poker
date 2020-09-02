@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/agile-poker/static/css/main.9dd666e1.chunk.css",
-    "main.js": "/agile-poker/static/js/main.0c5929d8.chunk.js",
-    "main.js.map": "/agile-poker/static/js/main.0c5929d8.chunk.js.map",
+    "main.js": "/agile-poker/static/js/main.49baea1d.chunk.js",
+    "main.js.map": "/agile-poker/static/js/main.49baea1d.chunk.js.map",
     "runtime-main.js": "/agile-poker/static/js/runtime-main.e77ec55f.js",
     "runtime-main.js.map": "/agile-poker/static/js/runtime-main.e77ec55f.js.map",
     "static/css/2.11829350.chunk.css": "/agile-poker/static/css/2.11829350.chunk.css",
     "static/js/2.e2bafc30.chunk.js": "/agile-poker/static/js/2.e2bafc30.chunk.js",
     "static/js/2.e2bafc30.chunk.js.map": "/agile-poker/static/js/2.e2bafc30.chunk.js.map",
     "index.html": "/agile-poker/index.html",
-    "precache-manifest.d0e0ef9389b775d6afb21664c27f28e1.js": "/agile-poker/precache-manifest.d0e0ef9389b775d6afb21664c27f28e1.js",
+    "precache-manifest.022540d507db78c6539fe313ba7ff2de.js": "/agile-poker/precache-manifest.022540d507db78c6539fe313ba7ff2de.js",
     "service-worker.js": "/agile-poker/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/agile-poker/static/css/2.11829350.chunk.css.map",
     "static/css/main.9dd666e1.chunk.css.map": "/agile-poker/static/css/main.9dd666e1.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.11829350.chunk.css",
     "static/js/2.e2bafc30.chunk.js",
     "static/css/main.9dd666e1.chunk.css",
-    "static/js/main.0c5929d8.chunk.js"
+    "static/js/main.49baea1d.chunk.js"
   ]
 }
