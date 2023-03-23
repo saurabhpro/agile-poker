@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://saurabhpro.github.io/agile-poker/",
   "dependencies": {
-    "@material-ui/core": "4.12.3",
+    "@mui/material": "5.0.0",
     "@material-ui/icons": "4.11.2",
     "@testing-library/jest-dom": "4.2.4",
     "@testing-library/react": "9.5.0",
